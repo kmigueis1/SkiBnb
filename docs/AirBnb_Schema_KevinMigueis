@@ -1,0 +1,66 @@
+
+Kevin Migueis
+AirBnb Schema:
+
+
+create_table "bookings", force: :cascade do |t|
+  t.string "start_date", null: false
+  t.string "end_date", null: false
+  t.integer "user_id", null: false
+  t.integer "home_id", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+create_table "homes", force: :cascade do |t|
+  t.integer "host_id", null: false
+  t.string "title", null: false
+  t.string "address"
+  t.float "daily_price", null: false
+  t.integer "bedrooms", null: false
+  t.integer "beds", null: false
+  t.integer "baths", null: false
+  t.text "description", null: false
+  t.boolean "kitchen"
+  t.boolean "tv"
+  t.boolean "wifi"
+  t.boolean "washer"
+  t.boolean "dryer"
+  t.boolean "parking"
+  t.string "cancellation", null: false
+  t.integer "max_guests", null: false
+  t.integer "minimum_stay"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+create_table "users", force: :cascade do |t|
+  t.string "first_name", null: false
+  t.string "last_name", null: false
+  t.string "email", null: false, unique: true
+  t.string "phone, null: false
+  t.string "password_digest”, null: false
+  t.string "session_token”, null: false, unique: true
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+
+create_table "reviews", force: :cascade do |t|
+  t.integer "author_id", null: false
+  t.integer "home_id", null: false
+  t.integer "rating", null: false
+  t.text "body", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+
+create_table "photos", force: :cascade do |t|
+  t.integer "home_id", null: false
+  t.text "img_url", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+end

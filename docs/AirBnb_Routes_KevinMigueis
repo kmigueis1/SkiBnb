@@ -1,0 +1,55 @@
+Kevin Migueis
+
+AirBnb Routes
+
+Backend routes:
+
+USERS:
+
+POST api/users
+DELETE api/users/
+PATCH api/users/
+
+SESSION:
+POST api/session
+DELETE api/session
+
+HOMES:
+GET api/homes
+GET api/homes/:id
+POST api/homes/
+PATCH api/homes/:id
+DELETE api/homes/:id
+
+BOOKINGS:
+GET api/homes/:id/bookings
+GET api/homes/:id/bookings/:booking_id
+POST api/homes/:id/bookings/
+PATCH api/homes/:id/bookings/:booking_id
+DELETE api/homes/:id/bookings/:booking_id
+
+REVIEWS:
+GET api/homes/:id/reviews
+POST api/homes/:id/reviews
+DELETE api/homes/:id/reviews/:review_id
+PATCH api/homes/:id/reviews/:review_id
+
+PHOTOS:
+GET api/homes/:id/photos
+POST api/homes/:id/photos
+DELETE api/homes/:id/photos/:photo_id
+
+
+FRONT END ROUTES
+/   (landing page)
+/login
+/signup
+/homes/?=somequeryforlocationvicinity
+/homes/id    (this will include all listed reviews on page for that home)
+/homes/id/book   (page to book the home)
+/account
+/account/trips (current and past bookings)
+/account/wishlist
+/account/edit
+/account/listings   (homes you are renting out if you are host)
+/account/listings/new

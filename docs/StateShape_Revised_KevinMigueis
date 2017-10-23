@@ -1,0 +1,102 @@
+//State Shape for AirBnb Clone
+//Kevin Migueis
+
+
+{
+  entities: {
+    users: {
+      27: {
+        id: 27,
+        first_name: "Miss",
+        last_name: "Fortune",
+        email: "MFortune@gmail.com",
+        phone: "867-5309",
+        img_url: "https://somefakeurl.img",
+
+      }
+
+    },
+    homes: {
+      43:{
+        id: 43,
+        host_id: 75,
+        title: 'The Lake Tahoe Chalet',
+        address: "125 Lake Taho Rd, Lake Tahoe",
+        daily_price: '$65’,
+        bedrooms: 4,
+        beds: 5,
+        baths: 2,
+        description: "Be surrounded by nature and yet have all the comforts"
+         "of home. Be our guest in this cozy log cabin surrounded by tall pines "
+         "and mountains, and yet still a short drive to Lake Tahoe and the casinos."
+        amenities: {
+          kitchen: true/false,
+          tv: true/false,
+          wifi: true/false,
+          washer: true/false,
+          dryer: true/false,
+          free_parking: true/false
+        },
+        cancellation: "strict",
+        max_guests: 5,
+        minimum_stay: 2,
+        photo_url: "https://myfakepicture.jpg",
+
+        photo_ids: [1,2,3,4,5,6,7,8]
+        review_ids: [434,424,654,314,45,54,3,366]
+      }
+    },
+
+    bookings: {
+      543:{
+        id: 543,
+        start_date: '12/3/17',
+        end_date: '12/13/17',
+        user_id: 5,
+        home_id: 27,
+      }
+    },
+
+    reviews {
+      345:{
+        id: 345,
+        author_id: 22,
+        home_id: 43,
+        rating: 4,
+        body: "We loved this Chalet and highly recommend it. Will definitely rent again!",
+        timestamps: '9/3/2017'
+      }
+    }
+
+    photos {
+      43: {
+        id: 43,
+        home_id: 43,
+        img_url: "http://myurl"
+      }
+    }
+
+
+  },
+
+  ui: {
+    photos_modal: true/false
+  },
+
+  errors: {
+    login: ["Incorrect username/passsword"],
+    booking: ["Booking is unavailable for these dates"]
+  },
+
+
+  session: {
+    user_id: 14,
+    username: "kmiggs",
+    email: "kmigueis1@gmail.com"
+  }
+
+
+
+
+
+}
