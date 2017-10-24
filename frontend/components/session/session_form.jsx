@@ -5,13 +5,19 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      email: "",
+      first_name: "",
+      last_name: "",
+      phone: "",
       password: ""
+
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleUsername = this.handleUsername.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
-
+    this.handleFirstName = this.handleFirstName.bind(this);
+    this.handleLastName = this.handleLastName.bind(this);
+    this.handlePhone = this.handlePhone.bind(this);
   }
 
 
@@ -19,15 +25,29 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    this.setState({password: "", username: ""});
+    this.setState({password: "", email: "", first_name: "", last_name: "", phone: "", password: ""});
   }
 
-  handleUsername(e){
-    this.setState({username: e.target.value});
+  handleEmail(e){
+    this.setState({email: e.target.value});
   }
 
   handlePassword(e){
     this.setState({password: e.target.value});
+  }
+
+
+  handlePhone(e){
+    this.setState({phone: e.target.value});
+  }
+
+  handleFirstName(e){
+    this.setState({first_name: e.target.value});
+
+  }
+
+  handleLastName(e){
+    this.setState({last_name: e.target.value});
   }
 
   render(){
@@ -36,16 +56,32 @@ class SessionForm extends React.Component {
     let link = this.props.formType === '/signup' ? ('/login') : ('/signup');
     // let errors = Object.values(this.props.errors);
     // console.log(this.props.errors.session.sessionErrors);
+    let signupFields = this.props.formType === '/signup' ? (
+      <div>
+      <label>FirstName
+        <input type="text" onChange={this.handleFirstName} value={this.state.first_name}></input>
+      </label>
+
+      <label>LastName
+        <input type="text" onChange={this.handleLastName} value={this.state.last_name}></input>
+      </label>
+
+      <label>Phone
+        <input type="text" onChange={this.handlePhone} value={this.state.phone}></input>
+      </label>
+      </div>) : (<h1></h1>);
+
     return (
       <div>
         {header}
         <form onSubmit={this.handleSubmit}>
-          <label>Username
-            <input type="text" onChange={this.handleUsername} value={this.state.username}></input>
+          <label>Email Address
+            <input type="text" onChange={this.handleEmail} value={this.state.email}></input>
           </label>
 
-          <label>Password
-            <input type="text" onChange={this.handlePassword} value={this.state.password}></input>
+          <li>{signupFields}</li>
+          <label>Create a Password
+            <input type="password" onChange={this.handlePassword} value={this.state.password}></input>
           </label>
           <button>Submit</button>
         </form>
@@ -55,6 +91,7 @@ class SessionForm extends React.Component {
 
 
   }
+
 }
 
 
