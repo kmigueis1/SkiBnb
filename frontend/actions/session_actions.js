@@ -6,7 +6,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveCurrentUser = (user) => {
-  console.log("Im in receiveCurrentUser");
+
   return {
     type: RECEIVE_CURRENT_USER,
     currentUser: user
@@ -22,7 +22,7 @@ export const receiveErrors = (errors) => {
 };
 
 export const login = (user) => (dispatch) => {
-  console.log("Im in login");
+
   return ApiUtil.login(user)
   .then((user) => {
     dispatch(receiveCurrentUser(user));
