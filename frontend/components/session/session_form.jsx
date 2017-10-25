@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
     let header = this.props.formType === '/signup' ? (<h1>Sign Up</h1>) : (<h1>Log In</h1>);
 
     let link = this.props.formType === '/signup' ? ('Log in') : ('Sign up');
-    let text = this.props.formType === '/signup' ? ('Already have an Skibnb account?') : ("Don't have an account?");
+    let text = this.props.formType === '/signup' ? ('Already have a Skibnb account?') : ("Don't have an account?");
     let submitName = this.props.formType === '/signup' ? ('Sign up') : ('Log in');
     // let errors = Object.values(this.props.errors);
     let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
@@ -84,11 +84,16 @@ class SessionForm extends React.Component {
           <div className="form-exit"><Link to='/' ><i>&times;</i></Link></div>
           <div>{header}</div>
           <div className="bar"></div>
-          <div>
-            <ul>
-              {errors}
-            </ul>
-          </div>
+          {
+            errors.length ? (<div className="auth-errors">
+            <div className="errors-left"><i className="icon fa fa-exclamation-triangle"></i></div>
+             <div className="errors-right">
+              <ul>
+                {errors}
+              </ul>
+            </div>
+          </div>) : (null)
+        }
           <form className="signup-form" onSubmit={this.handleSubmit}>
             <div className="input-field">
               <input type="text" placeholder="Email address" onChange={this.handleEmail} value={this.state.email}></input>
@@ -103,6 +108,16 @@ class SessionForm extends React.Component {
               <div className="button-container">
                 <button>{submitName}</button>
               </div>
+          </form>
+
+
+
+          <form className="guest-form">
+            <input className="guest-hidden" type="text" value={'guest'}></input>
+            <input className="guest-hidden" type="password" value={'password'}></input>
+            <div className="guest-container">
+              <button>Guest Login</button>
+            </div>
           </form>
           <div className="bar"></div>
 

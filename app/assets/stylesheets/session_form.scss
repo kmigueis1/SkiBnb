@@ -13,6 +13,58 @@
 
     .auth-form{
 
+      .auth-errors{
+
+        height: 90px;
+        width: 500px;
+        margin: 0 auto;
+        border-radius: 10px;
+        display: flex;
+
+        .errors-left{
+          background-color: #FC642D;
+          height: 100%;
+          width: 50px;
+          border-top-left-radius: inherit;
+          border-bottom-left-radius: inherit;
+          overflow: hidden;
+          border-right: 2px solid #FC642D;
+          border-bottom: 2px solid #FC642D;
+          border-top: 2px solid #FC642D;
+
+          i {
+            position: relative;
+            left: 11px;
+            top: 30px;
+            color: white;
+            font-size: 30px;
+          }
+        }
+        .errors-right{
+          border-top-right-radius: inherit;
+          border-bottom-right-radius: inherit;
+          height: 100%;
+          width: 450px;
+          border-right: 2px solid lightgray;
+          border-bottom: 2px solid lightgray;
+          border-top: 2px solid lightgray;
+          vertical-align: center;
+
+          ul {
+            display: inline-block;
+            list-style: none;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+
+            li {
+              display: inline-block;
+            }
+
+          }
+        }
+      }
+
       // position: absolute;
       // left: 25%;
       // top: 50%;
@@ -64,7 +116,7 @@
             width: 500px;
             padding-left: 30px;
             padding-right: 30px;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             padding-top: 0px;
             margin: 0 auto;
 
@@ -117,17 +169,43 @@
             }
         }
 
+        .guest-form{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .guest-hidden{
+            display: none;
+          }
+          button{
+            width: 500px;
+            margin: 0 auto;
+            height: 45px;
+            background-color: #008489;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 18px;
+          }
+        }
+
         .auth-footer {
           display: flex;
           align-items: center;
           justify-content: center;
           font-family: sans-serif;
+          font-size: 18px;
           font-weight: 100;
           color: gray;
 
           a {
             color: #008489;
-            font-weight: 200;
+            font-weight: 500;
+            margin: 10px;
+            text-decoration: none;
+          }
+
+          a:hover {
+            text-decoration: underline;
           }
         }
     }
