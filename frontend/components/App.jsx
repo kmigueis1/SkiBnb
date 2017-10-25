@@ -3,10 +3,13 @@ import GreetingContainer from './greeting/greeting_container';
 import {Route} from 'react-router-dom';
 import SessionFormContainer from './session/session_form_container';
 import { AuthRoute } from '../util/route_util';
+import NavBar from './nav_bar/nav_bar';
+
+
 const App = () => (
   <div>
     <header>
-      <h1>Ski BnB</h1>
+      <NavBar />
       <GreetingContainer/>
     </header>
 

@@ -1,0 +1,26 @@
+.nav-bar{
+  display: flex;
+}
+.search-bar-container{
+  padding-top: 15px;
+  .search-bar{
+    height: 100%;
+    display: flex;
+
+
+    .search-bar-input{
+      height: 48px;
+      width: 830px;
+    }
+
+  }
+}
+
+
+
+.home-button{
+  height: 80px;
+  width: 80px;
+  background: image-url('SkiBnb_logo.jpg') no-repeat;
+  background-size: contain;
+}
