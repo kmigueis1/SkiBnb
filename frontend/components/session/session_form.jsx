@@ -58,32 +58,39 @@ class SessionForm extends React.Component {
     // console.log(this.props.errors.session.sessionErrors);
     let signupFields = this.props.formType === '/signup' ? (
       <div>
-      <label>FirstName
-        <input type="text" onChange={this.handleFirstName} value={this.state.first_name}></input>
-      </label>
+        <div className="input-field">
+          <input type="text" placeholder="First Name" onChange={this.handleFirstName} value={this.state.first_name} />
+          <i className="icon fa fa-user-o"></i>
+        </div>
 
-      <label>LastName
-        <input type="text" onChange={this.handleLastName} value={this.state.last_name}></input>
-      </label>
+        <div className="input-field">
+          <input type="text" placeholder="Last Name" onChange={this.handleLastName} value={this.state.last_name}></input>
+            <i className="icon fa fa-user-o"></i>
+        </div>
 
-      <label>Phone
-        <input type="text" onChange={this.handlePhone} value={this.state.phone}></input>
-      </label>
+        <div className="input-field">
+          <input type="text" placeholder="Phone" onChange={this.handlePhone} value={this.state.phone}></input>
+            <i className="icon"></i>
+        </div>
       </div>) : (<h1></h1>);
 
     return (
       <div>
         {header}
-        <form onSubmit={this.handleSubmit}>
-          <label>Email Address
-            <input type="text" onChange={this.handleEmail} value={this.state.email}></input>
-          </label>
+        <form className="signup-form" onSubmit={this.handleSubmit}>
+          <div className="input-field">
+            <input type="text" placeholder="Email" onChange={this.handleEmail} value={this.state.email}></input>
+            <i className="icon fa fa-envelope-o"></i>
+          </div>
 
-          <li>{signupFields}</li>
-          <label>Create a Password
-            <input type="password" onChange={this.handlePassword} value={this.state.password}></input>
-          </label>
-          <button>Submit</button>
+          {signupFields}
+            <div className="input-field">
+              <input type="password" placeholder="Password" onChange={this.handlePassword} value={this.state.password}></input>
+              <i className="icon fa fa-lock"></i>
+            </div>
+            <div className="button-container">
+              <button>Submit</button>
+            </div>
         </form>
         <Link to={link} >{link.slice(1)}</Link>
       </div>
