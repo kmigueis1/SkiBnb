@@ -50,10 +50,13 @@ class SessionForm extends React.Component {
     this.setState({last_name: e.target.value});
   }
 
+
   render(){
     let header = this.props.formType === '/signup' ? (<h1>Sign Up</h1>) : (<h1>Log In</h1>);
 
-    let link = this.props.formType === '/signup' ? ('/login') : ('/signup');
+    let link = this.props.formType === '/signup' ? ('Log in') : ('Sign up');
+    let text = this.props.formType === '/signup' ? ('Already have an Skibnb account?') : ("Don't have an account?");
+    let submitName = this.props.formType === '/signup' ? ('Sign up') : ('Log in');
     // let errors = Object.values(this.props.errors);
     let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
     let signupFields = this.props.formType === '/signup' ? (
@@ -74,31 +77,41 @@ class SessionForm extends React.Component {
         </div>
       </div>) : (<h1></h1>);
 
+      // <div className="form-exit"><Link to='/' ><i className="icon fa fa-times"></i></Link></div>
     return (
-      <div>
-        {header}
-        <div>
-          <ul>
-            {errors}
-          </ul>
-        </div>
-        
-        <form className="signup-form" onSubmit={this.handleSubmit}>
-          <div className="input-field">
-            <input type="text" placeholder="Email" onChange={this.handleEmail} value={this.state.email}></input>
-            <i className="icon fa fa-envelope-o"></i>
+      <div className="auth-modal">
+        <div className="auth-form">
+          <div className="form-exit"><Link to='/' ><i>&times;</i></Link></div>
+          <div>{header}</div>
+          <div className="bar"></div>
+          <div>
+            <ul>
+              {errors}
+            </ul>
+          </div>
+          <form className="signup-form" onSubmit={this.handleSubmit}>
+            <div className="input-field">
+              <input type="text" placeholder="Email address" onChange={this.handleEmail} value={this.state.email}></input>
+              <i className="icon fa fa-envelope-o"></i>
+            </div>
+
+            {signupFields}
+              <div className="input-field">
+                <input type="password" placeholder="Create a Password" onChange={this.handlePassword} value={this.state.password}></input>
+                <i className="icon fa fa-lock"></i>
+              </div>
+              <div className="button-container">
+                <button>{submitName}</button>
+              </div>
+          </form>
+          <div className="bar"></div>
+
+          <div className="auth-footer">
+            <p>{text}</p>
+            <Link to={link} >{link}</Link>
           </div>
 
-          {signupFields}
-            <div className="input-field">
-              <input type="password" placeholder="Password" onChange={this.handlePassword} value={this.state.password}></input>
-              <i className="icon fa fa-lock"></i>
-            </div>
-            <div className="button-container">
-              <button>Submit</button>
-            </div>
-        </form>
-        <Link to={link} >{link.slice(1)}</Link>
+        </div>
       </div>
     );
 
