@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
 
     let link = this.props.formType === '/signup' ? ('/login') : ('/signup');
     // let errors = Object.values(this.props.errors);
-    // console.log(this.props.errors.session.sessionErrors);
+    let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
     let signupFields = this.props.formType === '/signup' ? (
       <div>
         <div className="input-field">
@@ -77,6 +77,9 @@ class SessionForm extends React.Component {
     return (
       <div>
         {header}
+        <ul>
+          {errors}
+        </ul>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <div className="input-field">
             <input type="text" placeholder="Email" onChange={this.handleEmail} value={this.state.email}></input>
