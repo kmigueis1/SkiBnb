@@ -18,6 +18,7 @@ class SessionForm extends React.Component {
     this.handleFirstName = this.handleFirstName.bind(this);
     this.handleLastName = this.handleLastName.bind(this);
     this.handlePhone = this.handlePhone.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
   }
 
 
@@ -25,7 +26,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    this.setState({password: "", email: "", first_name: "", last_name: "", phone: "", password: ""});
+    // this.setState({password: "", email: "", first_name: "", last_name: "", phone: "", password: ""});
   }
 
   handleEmail(e){
@@ -50,11 +51,17 @@ class SessionForm extends React.Component {
     this.setState({last_name: e.target.value});
   }
 
+  handleGuest(e){
+    e.preventDefault();
+    const user = {email: 'guest', password: 'password'};
+    this.props.processGuest(user);
+  }
+
 
   render(){
     let header = this.props.formType === '/signup' ? (<h1>Sign Up</h1>) : (<h1>Log In</h1>);
-
-    let link = this.props.formType === '/signup' ? ('Log in') : ('Sign up');
+    let linkText = this.props.formType === '/signup' ? ('Log in') : ('Sign up');
+    let link = this.props.formType === '/signup' ? ('/login') : ('/signup');
     let text = this.props.formType === '/signup' ? ('Already have a Skibnb account?') : ("Don't have an account?");
     let submitName = this.props.formType === '/signup' ? ('Sign up') : ('Log in');
     // let errors = Object.values(this.props.errors);
@@ -112,7 +119,7 @@ class SessionForm extends React.Component {
 
 
 
-          <form className="guest-form">
+          <form className="guest-form" onSubmit={this.handleGuest}>
             <input className="guest-hidden" type="text" value={'guest'}></input>
             <input className="guest-hidden" type="password" value={'password'}></input>
             <div className="guest-container">
@@ -123,7 +130,7 @@ class SessionForm extends React.Component {
 
           <div className="auth-footer">
             <p>{text}</p>
-            <Link to={link} >{link}</Link>
+            <Link to={link} >{linkText}</Link>
           </div>
 
         </div>

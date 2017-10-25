@@ -15,13 +15,15 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   let processForm = signup;
+  let processGuest = login;
 
   if(ownProps.location.pathname === '/login'){
     processForm = login;
   }
 
   return {
-    processForm: (user) => dispatch(processForm(user))
+    processForm: (user) => dispatch(processForm(user)),
+    processGuest: (user) => dispatch(processGuest(user))
   };
 };
 

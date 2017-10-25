@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render :show
     else
-      render json: ["invalid credentials"], status: 422
+      render json: ["Invalid inputs"], status: 422
     end
   end
 
