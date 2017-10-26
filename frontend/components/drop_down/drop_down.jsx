@@ -1,19 +1,41 @@
 import React from 'react'
 
+class DropDown extends React.Component {
 
-const DropDown = (props) => {
-  return (
-    props.active ?
-    (
-    <div className='drop-down' onClick={(e) => {e.stopPropagation()}}>
-      <ul>
-        <li>Hello</li>
-        <li>There</li>
-      </ul>
-    </div>
-  ) : ("")
-  );
+  constructor(props){
+    super(props);
+
+  }
+
+  render(){
+    return (
+      this.props.active ?
+      (
+      <div className='drop-down' onClick={(e) => {e.stopPropagation()}}>
+        <a onClick={this.props.logout}>
+          <div className='drop-down-item'>
+            <span>Log Out</span>
+          </div>
+        </a>
+        <a onClick={this.props.logout}>
+          <div className='drop-down-item'>
+            <span>Log Out</span>
+          </div>
+        </a>
+        <a onClick={this.props.logout}>
+          <div className='drop-down-item last-item'>
+            <span>Log Out</span>
+          </div>
+        </a>
+
+
+      </div>
+    ) : ("")
+    );
+  }
+
 }
+
 
 // <div className='drop-down' onClick={(e) => {e.stopPropagation()}}>
 //put event listener on App and have it automatically change the state of all drop downs to close

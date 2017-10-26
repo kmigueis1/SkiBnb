@@ -29,12 +29,10 @@ render(){
       <div className = 'auth-links'>
         <div className = 'auth-link-container'>
           <div className = 'user-profile' onClick= {this.handleDropdrop}>
-            <DropDown active={this.state.dropActive} />
-            <DropDownContainer />
+            <DropDownContainer active={this.state.dropActive}/>
           </div>
         </div>
       </div>
-      <button onClick={this.props.logout}>Log Out</button>
     </div>
   ) :
 

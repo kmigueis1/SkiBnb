@@ -1,0 +1,36 @@
+.drop-down{
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  box-shadow: 1px 1px 1px 1px #888888;
+
+
+  // ul{
+  //   -webkit-padding-start: 0px;
+  //   li{
+  //     margin: 0 auto;
+  //     align-items: center;
+  //   }
+  // }
+  a{
+    align-items: center;
+    width: 280px;
+    height: 51px;
+    .drop-down-item{
+      height: inherit;
+      width: 248px;
+      border-bottom: 1px solid lightgray;
+      text-align: left;
+
+      span{
+        font-size: 14px;
+        font-family: sans-serif;
+      }
+    }
+    .last-item{
+      border-bottom: 0px;
+    }
+  }
+
+}

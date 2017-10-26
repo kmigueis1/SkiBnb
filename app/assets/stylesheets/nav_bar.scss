@@ -102,11 +102,22 @@
               width: 30px;
               background: image-url('profile-icon.png') no-repeat;
               background-size: contain;
+
+              .drop-down{
+                // height: 53px;
+                width: 280px;
+                float: left;
+                position: relative;
+                right: 240px;
+                top: 56px;
+
+              }
             }
 
             .user-profile:hover {
               cursor: pointer;
             }
+
           }
         }
       }
