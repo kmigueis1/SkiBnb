@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   validates :first_name, :last_name, :email, :phone, :session_token, :password_digest, presence: true
   validates :password, length: {minimum: 6, allow_nil: true}
+  has_attached_file :avatar, default_url: "profile-icon.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token
 

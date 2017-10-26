@@ -15,13 +15,18 @@ class Greeting extends React.Component {
     this.handleDropdrop = this.handleDropdrop.bind(this);
   }
 
+  componentDidMount(){
+    this.state.dropActive = false;
+  }
+
 
   handleDropdrop(e){
     this.setState({dropActive: !this.state.dropActive});
   }
 
 render(){
-
+  // <img src={user.avatar_url} ></img>
+  //this img tag above is how you can insert the user's image
   return (
     this.props.currentUser ?
     (
@@ -29,6 +34,7 @@ render(){
       <div className = 'auth-links'>
         <div className = 'auth-link-container'>
           <div className = 'user-profile' onClick= {this.handleDropdrop}>
+
             <DropDownContainer active={this.state.dropActive}/>
           </div>
         </div>

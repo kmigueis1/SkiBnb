@@ -35,6 +35,9 @@ gem 'font-awesome-sass'
 
 gem 'pusher'
 gem 'figaro'
+gem 'aws-sdk', '< 3.0'
+gem 'paperclip', '~> 5.0.0.beta1'
+gem 'pry-rails'
 
 
 group :development, :test do
