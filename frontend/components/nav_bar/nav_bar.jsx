@@ -6,11 +6,15 @@ import AccountBar from '../account_bar/account_bar';
 
 const NavBar = () => (
   <div className="nav-bar">
-    <div className="home-button">
-      
+    <div className='left-nav'>
+      <div className="home-button">
+
+      </div>
+      <SearchBar />
     </div>
-    <SearchBar />
-    <AccountBar />
+    <div className='right-nav'>
+      <AccountBar />
+    </div>
   </div>
 );
 

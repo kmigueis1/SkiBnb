@@ -5,8 +5,7 @@ import GreetingContainer from '../greeting/greeting_container';
 
 const AccountBar = () => {
   return (
-    <div>
-      <h1>AccountBar</h1>
+    <div className='account-bar'>
       <GreetingContainer />
     </div>
   );

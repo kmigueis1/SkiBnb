@@ -11,10 +11,13 @@ render(){
     <button onClick={this.props.logout}>Log Out</button>
     </div> :
 
-    <div>
-
-      <Link to='/signup'>Sign Up</Link>
-      <Link to='/login'>Log In</Link>
+    <div className='auth-links'>
+      <div className='signup-link-container'>
+        <Link to='/signup'>Sign Up</Link>
+      </div>
+      <div className='login-link-container'>
+        <Link to='/login'>Log In</Link>
+      </div>
 
     </div>
 
