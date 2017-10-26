@@ -52,11 +52,18 @@
 
 
 
-      .home-button{
+      .home-button-container{
         height: 80px;
         width: 80px;
-        background: image-url('SkiBnb_logo.jpg') no-repeat;
-        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .home-button{
+          height: 45px;
+          width: 45px;
+          background: image-url('SkiBnb_logo.jpg') no-repeat;
+          background-size: contain;
+        }
       }
   }
 
