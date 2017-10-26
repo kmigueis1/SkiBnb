@@ -6,16 +6,9 @@
   border-bottom: 1px solid lightgray;
   height: 80;
 
-  a {
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 13px;
-    color: gray;
-  }
 
-  a:hover{
 
-  }
+
 
   .left-nav{
 
@@ -70,28 +63,39 @@
 
   .right-nav{
 
+    a {
+      text-decoration: none;
+      font-family: sans-serif;
+      font-size: 13px;
+      color: gray;
+    }
+
     height: 100%;
     .account-bar{
 
       .auth-links{
         display: flex;
         height: 80px;
-        .signup-link-container{
-          height: 100%;
-          width: 80px;
-          text-align: center;
-          vertical-align: center;
-
-        }
-        .login-link-container{
-          height: 100%;
-          width: 80px;
-          text-align: center;
+          .auth-link-container{
+            height: 100%;
+            width: 80px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .auth-link{
+              height: 32px;
+              padding-top: 10px;
+            }
+            .auth-link:hover {
+              border-bottom: 2px solid gray;
+            }
+          }
         }
       }
     }
-  }
 }
+
 
 
 

@@ -12,11 +12,15 @@ render(){
     </div> :
 
     <div className='auth-links'>
-      <div className='signup-link-container'>
-        <Link to='/signup'>Sign Up</Link>
+      <div className='auth-link-container'>
+        <div className='auth-link'>
+          <Link to='/signup'>Sign Up</Link>
+        </div>
       </div>
-      <div className='login-link-container'>
-        <Link to='/login'>Log In</Link>
+      <div className='auth-link-container'>
+        <div className='auth-link'>
+          <Link to='/login'>Log In</Link>
+        </div>
       </div>
 
     </div>
