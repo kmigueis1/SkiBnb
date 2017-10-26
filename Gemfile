@@ -32,7 +32,7 @@ gem 'font-awesome-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'figaro'
 
 
 group :development, :test do
