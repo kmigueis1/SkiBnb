@@ -120,8 +120,6 @@ class SessionForm extends React.Component {
 
 
           <form className="guest-form" onSubmit={this.handleGuest}>
-            <input className="guest-hidden" type="text" value={'guest'}></input>
-            <input className="guest-hidden" type="password" value={'password'}></input>
             <div className="guest-container">
               <button>Guest Login</button>
             </div>
