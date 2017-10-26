@@ -1,24 +1,49 @@
 .nav-bar{
+  margin: 0px;
+  -webkit-appearance: none;
   display: flex;
-}
-.search-bar-container{
-  padding-top: 15px;
-  .search-bar{
-    height: 100%;
+  border-bottom: 1px solid lightgray;
+
+  .search-bar-container{
+    width: 895px;
     display: flex;
 
-
-    .search-bar-input{
+    .search-bar{
       height: 48px;
-      width: 830px;
+      justify-content: center;
+      vertical-align: center;
+      margin-top: 12px;
+      display: flex;
+      border: 1px solid gray;
+
+      .magnifying-glass-search{
+        height: 45px;
+        width: 45px;
+        i {
+          position: relative;
+          font-size: 27px;
+          top: 9px;
+          left: 16px;
+          margin: 2px;
+        }
+      }
+
+      .search-bar-input{
+        height: 45px;
+        width: 490px;
+        border: 0px solid;
+        margin-left: 20px;
+        outline: none;
+        font-size: 18px;
+      }
+
     }
-
   }
-}
 
-.home-button{
-  height: 80px;
-  width: 80px;
-  background: image-url('SkiBnb_logo.jpg') no-repeat;
-  background-size: contain;
+  .home-button{
+    height: 80px;
+    width: 80px;
+    background: image-url('SkiBnb_logo.jpg') no-repeat;
+    background-size: contain;
+  }
 }
