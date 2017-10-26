@@ -97,6 +97,16 @@
             .auth-link:hover {
               border-bottom: 2px solid gray;
             }
+            .user-profile{
+              height: 30px;
+              width: 30px;
+              background: image-url('profile-icon.png') no-repeat;
+              background-size: contain;
+            }
+
+            .user-profile:hover {
+              cursor: pointer;
+            }
           }
         }
       }

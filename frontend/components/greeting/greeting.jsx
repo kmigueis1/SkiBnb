@@ -6,12 +6,21 @@ render(){
 
   return (
     this.props.currentUser ?
+    (
     <div>
-    <h1>{`Welcome, ${this.props.currentUser.first_name}`}</h1>
-    <button onClick={this.props.logout}>Log Out</button>
-    </div> :
+      <div className = 'auth-links'>
+        <div className = 'auth-link-container'>
+          <div className = 'user-profile'>
 
-    <div className='auth-links'>
+          </div>
+        </div>
+      </div>
+      <button onClick={this.props.logout}>Log Out</button>
+    </div>
+  ) :
+
+    (
+      <div className='auth-links'>
       <div className='auth-link-container'>
         <div className='auth-link'>
           <Link to='/signup'>Sign Up</Link>
@@ -24,6 +33,7 @@ render(){
       </div>
 
     </div>
+  )
 
   );
 }
