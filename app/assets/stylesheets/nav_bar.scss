@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 5;
 
   .nav-bar {
 
@@ -13,6 +14,7 @@
     align-items: center;
     border-bottom: 1px solid lightgray;
     height: 80;
+    background: white;
 
     .left-nav{
 
