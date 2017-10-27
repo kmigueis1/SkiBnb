@@ -13,23 +13,15 @@ class DropDown extends React.Component {
       this.props.active ?
       (
       <div className='drop-down' onClick={(e) => {e.stopPropagation()}}>
-        <a onClick={this.props.logout}>
-          <div className='drop-down-item'>
-            <span>Log Out</span>
-          </div>
-        </a>
-        <a onClick={this.props.logout}>
-          <div className='drop-down-item'>
-            <span>Log Out</span>
-          </div>
-        </a>
-        <a onClick={this.props.logout}>
-          <div className='drop-down-item last-item'>
-            <span>Log Out</span>
-          </div>
-        </a>
-
-
+        <div onClick={this.props.logout} className='drop-down-item'>
+          <span>Log Out</span>
+        </div>
+        <div onClick={this.props.logout} className='drop-down-item'>
+          <span>Log Out</span>
+        </div>
+        <div onClick={this.props.logout} className='drop-down-item last-item'>
+          <span>Log Out</span>
+        </div>
       </div>
     ) : ("")
     );

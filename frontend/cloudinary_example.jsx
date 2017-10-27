@@ -37,6 +37,8 @@ postImage(url){
     method: "POST",
     url: '/api/images',
     data: {image: img},
+    processData: false,
+    contentType: false,
     success: (image)=>{
       images = this.state.images;
       this.setState({images: images})

@@ -8,7 +8,7 @@ import NavBar from './nav_bar/nav_bar';
 
 const App = () => (
   <div>
-    <header>
+    <header className="header-container">
       <NavBar />
     </header>
 
