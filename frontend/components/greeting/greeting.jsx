@@ -34,7 +34,7 @@ render(){
       <div className = 'auth-links'>
         <div className = 'auth-link-container'>
           <div className = 'user-profile' onClick= {this.handleDropdrop}>
-
+            <img className ='avatar-photo' src={this.props.currentUser.avatar_url} ></img>
             <DropDownContainer active={this.state.dropActive}/>
           </div>
         </div>

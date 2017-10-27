@@ -64,6 +64,7 @@ class SessionForm extends React.Component {
     let link = this.props.formType === '/signup' ? ('/login') : ('/signup');
     let text = this.props.formType === '/signup' ? ('Already have a Skibnb account?') : ("Don't have an account?");
     let submitName = this.props.formType === '/signup' ? ('Sign up') : ('Log in');
+    let passwordPlaceholder = this.props.formType === '/signup' ? ("Create a Password") : ("Password");
     // let errors = Object.values(this.props.errors);
     let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
     let signupFields = this.props.formType === '/signup' ? (
@@ -109,7 +110,7 @@ class SessionForm extends React.Component {
 
             {signupFields}
               <div className="input-field">
-                <input type="password" placeholder="Create a Password" onChange={this.handlePassword} value={this.state.password}></input>
+                <input type="password" placeholder={passwordPlaceholder} onChange={this.handlePassword} value={this.state.password}></input>
                 <i className="icon fa fa-lock"></i>
               </div>
               <div className="button-container">

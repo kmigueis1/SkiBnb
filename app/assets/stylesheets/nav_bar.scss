@@ -114,9 +114,14 @@
               .user-profile{
                 height: 30px;
                 width: 30px;
-                background: image-url('profile-icon.png') no-repeat;
-                background-size: contain;
-
+                // background: image-url('profile-icon.png') no-repeat;
+                // background-size: contain;
+                .avatar-photo{
+                  height: 100%;
+                  width: 100%;
+                  border-radius: 17px;
+                  border: 2px solid lightgray;
+                }
                 .drop-down{
                   // height: 53px;
                   // width: 280px;
@@ -126,7 +131,7 @@
                   // top: 56px;
 
                   position: relative;
-                  top: 56px;
+                  top: 18px;
                   right: 250px;
                   width: 250px;
                   padding: 0 16px;
