@@ -53,6 +53,7 @@ class UploadPhotoForm extends React.Component {
 
     return(
       <div className="user-edit-form">
+      <div className="form-header"><span>Profile Photo</span></div>
       <form className="edit-form" onSubmit={this.handleSubmit}>
         <div className="input-field">
           <input type="file" placeholder="First Name" onChange={this.handleFile}></input>
