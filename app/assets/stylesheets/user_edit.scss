@@ -1,12 +1,15 @@
   .user-edit-form{
+
     background-color: white;
     position: relative;
     top: 120px;
     margin: 0 auto;
     width: 766px;
-    border: 1px solid lightgray;
-    margin-bottom: 28px;
 
+    margin-bottom: 28px;
+    .form-wrapper{
+      border: 1px solid lightgray;
+    }
 
     .form-header{
       background: #eaebed;
@@ -47,6 +50,21 @@
         border: 1px solid gray;
         font-size: 14px;
         padding-left: 10px;
+      }
+    }
+    .save-button{
+      margin-top: 25px;
+      width: 90px;
+      height:42px;
+      background-color: #ff5a5f;
+      color: white;
+      font-size: 14px;
+      border-radius: 4px;
+      border: none;
+
+      &:hover{
+        cursor: pointer;
+        background-color: rgba(255, 90, 95, 0.74);
       }
     }
   }

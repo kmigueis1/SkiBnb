@@ -58,6 +58,7 @@ class UserEditForm extends React.Component {
       <div className="user-edit-form">
         <div className="form-header"><span>Required</span></div>
       <form className="edit-form" onSubmit={this.handleSubmit}>
+        <div className="form-wrapper">
         <div className="input-field">
           <label>First Name</label>
           <input type="text" placeholder="First Name" onChange={this.handleFirstName} value={this.state.first_name}></input>
@@ -74,10 +75,10 @@ class UserEditForm extends React.Component {
             <label>Phone Number</label>
           <input type="text" placeholder="Phone" onChange={this.handlePhone} value={this.state.phone}></input>
         </div>
-
+        </div>
 
           <div className="button-container">
-            <button>Save</button>
+            <button className="save-button" >Save</button>
           </div>
       </form>
     </div>

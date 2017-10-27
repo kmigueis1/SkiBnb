@@ -52,9 +52,12 @@ class UploadPhotoForm extends React.Component {
 
 
     return(
-      <div className="user-edit-form">
+
+    <div className="user-edit-form">
       <div className="form-header"><span>Profile Photo</span></div>
+      <div className="form-wrapper">
       <form className="edit-form" onSubmit={this.handleSubmit}>
+
         <div className="input-field">
           <input type="file" placeholder="First Name" onChange={this.handleFile}></input>
         </div>
@@ -62,7 +65,9 @@ class UploadPhotoForm extends React.Component {
             <button>Save</button>
           </div>
           <img src={this.state.imageUrl}/>
+
       </form>
+    </div>
     </div>
     );
 
