@@ -67,5 +67,22 @@
         cursor: pointer;
         background-color: rgba(255, 90, 95, 0.74);
       }
+
+    }
+
+    .photo-input-container{
+      display: flex;
+      .profile-image{
+        height: 225px;
+        width: 225px;
+        border: 1px solid lightgray;
+      }
+      .photo-input{
+        width: 400px;
+      }
+
+      
+
+
     }
   }

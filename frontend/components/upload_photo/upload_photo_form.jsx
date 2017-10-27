@@ -48,7 +48,7 @@ class UploadPhotoForm extends React.Component {
   render(){
 
     let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
-
+    let imageUrl = this.state.imageUrl ? (this.state.imageUrl) : (this.props.currentUser.avatar)
 
 
     return(
@@ -57,14 +57,20 @@ class UploadPhotoForm extends React.Component {
       <div className="form-header"><span>Profile Photo</span></div>
       <div className="form-wrapper">
       <form className="edit-form" onSubmit={this.handleSubmit}>
-
-        <div className="input-field">
-          <input type="file" placeholder="First Name" onChange={this.handleFile}></input>
-        </div>
+        <div className="photo-input-container">
+          <div className="profile-image">
+            <img src={this.state.imageUrl}/>
+          </div>
+          <div className="photo-input">
+            <label className="hidden-input-label">
+              <input type="file" onChange={this.handleFile}></input>
+            </label>
+          </div>
           <div className="button-container">
             <button>Save</button>
           </div>
-          <img src={this.state.imageUrl}/>
+        </div>
+
 
       </form>
     </div>
