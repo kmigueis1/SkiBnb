@@ -29,10 +29,14 @@ export const updateUser = (user) => {
   });
 };
 
-export const updateUserPhoto = (user) => {
+export const updateUserPhoto = (formData, userId) => {
+  console.log(userId);
+  console.log("hello there");
   return $.ajax({
     method: 'PATCH',
-    url: `api/users/${user.id}`,
-    data: { user: user }
+    url: `api/users/${userId}`,
+    contentType: false,
+    processData: false,
+    data: formData
   });
 }

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import UploadPhotoFormContainer from '../upload_photo/upload_photo_form_container';
 
 class UserEditForm extends React.Component {
 
@@ -53,6 +54,7 @@ class UserEditForm extends React.Component {
 
 
     return(
+      <div>
       <div className="user-edit-form">
       <form className="edit-form" onSubmit={this.handleSubmit}>
         <div className="input-field">
@@ -73,6 +75,11 @@ class UserEditForm extends React.Component {
             <button>Save</button>
           </div>
       </form>
+    </div>
+
+    <div>
+      <UploadPhotoFormContainer />
+    </div>
     </div>
     );
 

@@ -19,7 +19,6 @@ class Api::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      login(@user)
       render :show
     else
       render json: ["Invalid inputs"], status: 422
@@ -27,7 +26,7 @@ class Api::UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :phone, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :phone, :password, :avatar)
   end
 
 end

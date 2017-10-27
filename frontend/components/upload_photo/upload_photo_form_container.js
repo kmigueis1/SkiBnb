@@ -13,8 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    updateUserPhoto: (user) => dispatch(updateUserPhoto(user)),
+    updateUserPhoto: (formData, userId) => dispatch(updateUserPhoto(formData, userId)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserEditForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UploadPhotoForm);

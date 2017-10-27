@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import UserEditForm from './user_edit_form'
-import { updateUser } from '../../actions/session_actions'
+import { updateUserPhoto } from '../../actions/session_actions'
 
 const mapStateToProps = (state, ownProps) => {
   //may want to check what formType string actually evaluates to
@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    updateUser: (user) => dispatch(updateUser(user)),
+    updateUserPhoto: (formData) => dispatch(updateUserPhoto(formData)),
   };
 };
 

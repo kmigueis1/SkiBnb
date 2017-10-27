@@ -61,3 +61,15 @@ export const updateUser =  (user) => (dispatch) => {
     dispatch(receiveErrors(errors));
   });
 };
+
+export const updateUserPhoto = (formData, userId) => (dispatch) => {
+  console.log(userId);
+  console.log("in thunk action");
+  return ApiUtil.updateUserPhoto(formData, userId)
+  .then((user) => {
+    dispatch(receiveCurrentUser(user));
+  },
+  (errors) => {
+    dispatch(receiveErrors(errors));
+  });
+}

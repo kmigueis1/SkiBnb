@@ -11,7 +11,7 @@ class UploadPhotoForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handlePhoto = this.handlePhoto.bind(this);
+    this.handleFile = this.handleFile.bind(this);
 
   }
 
@@ -22,7 +22,8 @@ class UploadPhotoForm extends React.Component {
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
       this.setState({imageFile: file, imageUrl: fileReader.result})
-    }.bind(this);
+    };
+
     if(file){
       fileReader.readAsDataURL(file);
     }
@@ -30,11 +31,16 @@ class UploadPhotoForm extends React.Component {
 
   handleSubmit(e){
     // e.preventDefault();
-    const data = new FormData();
-    if(this.state.imageFile) data.append("this.state.imageFile");
-    const user = Object.assign({}, this.props.currentUser);
+    const formData = new FormData();
 
-    this.props.updateUserPhoto(user);
+    formData.append("user[avatar]", this.state.imageFile);
+    const userFields = Object.values(this.props.currentUser);
+
+    userFields.forEach((field) => {
+      formData.append(`user[${field}]`, this.props.currentUser[field]);
+    })
+    console.log(this.props.currentUser.id);
+    this.props.updateUserPhoto(formData, this.props.currentUser.id);
   }
 
 
