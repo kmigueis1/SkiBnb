@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create({email: 'guest', password: 'password', first_name: 'guest', last_name: 'guest', phone: '888-867-5309' });
+User.create({email: 'guest@gmail.com', password: 'password', first_name: 'guest', last_name: 'guest', phone: '888-867-5309' });
