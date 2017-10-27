@@ -51,3 +51,13 @@ export const signup = (user) => (dispatch) => {
     dispatch(receiveErrors(errors));
   });
 };
+
+export const updateUser =  (user) => (dispatch) => {
+  return ApiUtil.updateUser(user)
+  .then((user) => {
+    dispatch(receiveCurrentUser(user));
+  },
+  (errors) => {
+    dispatch(receiveErrors(errors));
+  });
+};

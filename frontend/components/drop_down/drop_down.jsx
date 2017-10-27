@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class DropDown extends React.Component {
 
@@ -13,11 +14,11 @@ class DropDown extends React.Component {
       this.props.active ?
       (
       <div className='drop-down' onClick={(e) => {e.stopPropagation()}}>
-        <div onClick={this.props.logout} className='drop-down-item'>
-          <span>Log Out</span>
+        <div className='drop-down-item'>
+          <Link to='/user/edit'><span>Edit Profile</span></Link>
         </div>
-        <div onClick={this.props.logout} className='drop-down-item'>
-          <span>Log Out</span>
+        <div className='drop-down-item'>
+          <span>Account Settings</span>
         </div>
         <div onClick={this.props.logout} className='drop-down-item last-item'>
           <span>Log Out</span>
