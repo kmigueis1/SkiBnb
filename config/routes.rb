@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
     resources :users, only: [:create, :show, :update]
     resource :session, only: [:create, :destroy]
-    resources :homes, only: [:index, :create]
+    resources :homes, only: [:index, :show, :create, :update, :destroy]
   end
 
 

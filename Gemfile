@@ -38,6 +38,7 @@ gem 'figaro'
 gem 'aws-sdk', '< 3.0'
 gem 'paperclip', '~> 5.0.0.beta1'
 gem 'pry-rails'
+gem 'annotate'
 
 
 group :development, :test do

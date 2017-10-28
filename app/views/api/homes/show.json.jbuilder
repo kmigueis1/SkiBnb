@@ -1,0 +1,22 @@
+json.id @home.id
+json.hostId @home.host_id
+json.title @home.title
+json.address @home.address
+json.latitude @home.latitude
+json.longitude @home.longitude
+json.price @home.price
+json.bedrooms @home.bedrooms
+json.beds @home.beds
+json.baths @home.baths
+json.description @home.description
+json.cancellation @home.cancellation
+json.maxGuests @home.max_guests
+json.minStay @home.minimum_stay
+json.amenities do
+  json.kitchen @home.kitchen
+  json.tv @home.tv
+  json.wifi @home.wifi
+  json.washer @home.washer
+  json.dryer @home.dryer
+  json.parking @home.parking
+end
