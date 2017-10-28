@@ -31,6 +31,8 @@ class Home < ApplicationRecord
   validates :price, :bedrooms, :beds, :baths, :description, presence: true
   validates :cancellation, :max_guests, :minimum_stay, presence: true
 
+  has_attached_file :image, default_url: "SkiLodge-Default.jpg"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 
 end

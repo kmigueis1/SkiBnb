@@ -12,6 +12,7 @@ json.description @home.description
 json.cancellation @home.cancellation
 json.maxGuests @home.max_guests
 json.minStay @home.minimum_stay
+json.image_url asset_path(@home.image.url)
 json.amenities do
   json.kitchen @home.kitchen
   json.tv @home.tv
