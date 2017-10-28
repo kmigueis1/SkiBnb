@@ -80,8 +80,14 @@
       .photo-input{
         width: 400px;
       }
+      // 
+      // input[type="file"]{
+      //   display: none;
+      // }
 
-      
+      .hidden-input-label{
+        background-color: gray;
+      }
 
 
     }
