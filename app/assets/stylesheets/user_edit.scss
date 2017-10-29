@@ -1,94 +1,128 @@
   .user-edit-form{
-
     background-color: white;
     position: relative;
+    color: #484848;
+    font-family: sans-serif;
     top: 120px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 766px;
-    // z-index: -100;
 
-    margin-bottom: 28px;
-    .form-wrapper{
-      border: 1px solid lightgray;
-    }
+    .form-container {
+      border: 1px solid #dce0e0;
 
-    .form-header{
-      background: #eaebed;
-      height: 47px;
+      .form-header{
+        background: #edefed;
+        height: 50px;
+        font-size: 16px;
+        border-bottom: 1px solid #dce0e0;
 
-      span{
-        margin: 20px;
-        line-height: 55px;
-        vertical-align: middle;
-        font-size: 14px;
-        font-family: helvetica;
-        color: black;
-        font-weight: 200;
-
-      }
-    }
-
-    .input-field {
-      height: 35px;
-      width: 540px;
-      vertical-align: middle;
-      display: flex;
-      margin: 28px;
-      label{
-        width: 185px;
-        text-align: right;
-        display: inline-block;
-        vertical-align: middle;
-        font-family: sans-serif;
-        font-size: 13px;
-        color: gray;
-      }
-      input {
-        margin-left: 15px;
-
-        height: 35px;
-        width: 540px;
-        border: 1px solid gray;
-        font-size: 14px;
-        padding-left: 10px;
-      }
-    }
-    .save-button{
-      margin-top: 25px;
-      width: 90px;
-      height:42px;
-      background-color: #ff5a5f;
-      color: white;
-      font-size: 14px;
-      border-radius: 4px;
-      border: none;
-
-      &:hover{
-        cursor: pointer;
-        background-color: rgba(255, 90, 95, 0.74);
+        span{
+          margin: 20px;
+          line-height: 50px;
+        }
       }
 
+      .form-wrapper{
+
+        .input-field {
+          height: 35px;
+          width: 540px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 28px;
+
+          label{
+            width: 185px;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          input {
+            color: #484848;
+            margin-left: 15px;
+            height: 35px;
+            width: 540px;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            padding-left: 10px;
+            border-radius: 3px;
+          }
+        }
     }
+
+  }
+
+  .save-button{
+    margin-top: 25px;
+    width: 90px;
+    height:42px;
+    background-color: #ff5a5f;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+
+    &:hover{
+      cursor: pointer;
+      background-color: rgba(255, 90, 95, 0.74);
+    }
+
+  }
 
     .photo-input-container{
+      padding: 20px;
       display: flex;
+      justify-content: space-between;
+
       .profile-image{
         height: 225px;
         width: 225px;
-        border: 1px solid lightgray;
+        align-self: flex-start;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
+
       .photo-input{
         width: 400px;
+        flex-grow: 1;
+        margin-left: 20px;
+
+        .photo-upload-description {
+          margin-bottom: 20px;
+          padding: 0 5px;
+        }
+
+        .file-input-wrapper {
+          width: 100%;
+          height: 40px;
+          position: relative;
+
+          > .file-input-button {
+            display: inline-block;
+            font-size: 15px;
+            color: inherit;
+            font-weight: bold;
+            width: inherit;
+            border-radius: 4px;
+            background-color: white;
+            border: 1px solid #c4c4c4;
+            height: 40px;
+          }
+
+          > input[type="file"] {
+            font-size: 35px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: 0;
+            opacity: 0;
+          }
+
+        }
       }
-      // 
-      // input[type="file"]{
-      //   display: none;
-      // }
-
-      .hidden-input-label{
-        background-color: gray;
-      }
-
-
     }
   }

@@ -54,26 +54,32 @@ class UploadPhotoForm extends React.Component {
     return(
 
     <div className="user-edit-form">
-      <div className="form-header"><span>Profile Photo</span></div>
-      <div className="form-wrapper">
       <form className="edit-form" onSubmit={this.handleSubmit}>
-        <div className="photo-input-container">
-          <div className="profile-image">
-            <img src={this.state.imageUrl}/>
-          </div>
-          <div className="photo-input">
-            <label className="hidden-input-label">
-              <input type="file" onChange={this.handleFile}></input>
-            </label>
-          </div>
-          <div className="button-container">
-            <button>Save</button>
+        <div className="form-container">
+          <div className="form-header"><span>Profile Photo</span></div>
+
+          <div className="form-wrapper">
+            <div className="photo-input-container">
+              <div className="profile-image">
+                <img src={this.state.imageUrl}/>
+              </div>
+              <div className="photo-input">
+                <div className="photo-upload-description">
+                  Clear frontal face photos are an important way by which hosts and guests can learn about each other.
+                </div>
+
+                <div className="file-input-wrapper">
+                  <button className="file-input-button">Upload a file from your computer</button>
+                  <input type="file" onChange={this.handleFile}></input>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-
+        <div className="button-container">
+          <button className="save-button">Save</button>
+        </div>
       </form>
-    </div>
     </div>
     );
 

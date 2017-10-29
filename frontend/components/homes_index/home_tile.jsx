@@ -9,7 +9,7 @@ const HomeTile = (props) => {
         <span className="home-title">{props.home.title}</span>
       </div>
       <div className="home-tile-desc-2">
-        <span className="home-beds">{props.home.beds} beds</span>
+        <span className="home-beds">{props.home.beds} beds, {props.home.baths} baths</span>
       </div>
     </div>
   );
