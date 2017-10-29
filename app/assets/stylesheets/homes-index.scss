@@ -2,7 +2,8 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
-
+    border-top: 1px solid lightgrey;
+    margin-top: 60px;
 
     .homes-grid {
         padding: 24px 0;
@@ -20,6 +21,11 @@
             font-family: sans-serif;
             line-height: 20px;
             color: rgb(72, 72, 72);
+
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
 
             .home-image {
               width: 100%;
