@@ -6,6 +6,15 @@
 // @import './drop_down';
 // @import './user_edit';
 
+body {
+  margin: 0;
+}
+
 ul{
   list-style: none;
+}
+
+.main-content {
+    margin-top: 140px;
+    border-top: 1px solid lightgrey;
 }

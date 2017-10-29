@@ -5,6 +5,7 @@ import SessionFormContainer from './session/session_form_container';
 import { AuthRoute, UserRoute } from '../util/route_util';
 import NavBar from './nav_bar/nav_bar';
 import UserEditFormContainer from './user_edit/user_edit_form_container';
+import HomesIndexContainer from './homes_index/homes_index_container'
 
 
 
@@ -17,8 +18,12 @@ const App = () => (
     <AuthRoute path='/login' component={SessionFormContainer} />
     <AuthRoute path='/signup' component={SessionFormContainer} />
     <UserRoute path='/user/edit' component={UserEditFormContainer} />
+
+    <div className="main-content">
+      <HomesIndexContainer />
+
+    </div>
   </div>
 );
 // <GreetingContainer/>
-
 export default App;
