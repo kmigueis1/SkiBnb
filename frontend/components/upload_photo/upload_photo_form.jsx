@@ -15,8 +15,6 @@ class UploadPhotoForm extends React.Component {
 
   }
 
-
-
   handleFile(e){
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
@@ -48,8 +46,7 @@ class UploadPhotoForm extends React.Component {
   render(){
 
     let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
-    let imageUrl = this.state.imageUrl ? (this.state.imageUrl) : (this.props.currentUser.avatar)
-
+    let imageUrl = this.state.imageUrl ? (this.state.imageUrl) : (this.props.currentUser.avatar_url)
 
     return(
 
@@ -61,7 +58,7 @@ class UploadPhotoForm extends React.Component {
           <div className="form-wrapper">
             <div className="photo-input-container">
               <div className="profile-image">
-                <img src={this.state.imageUrl}/>
+                <img src={imageUrl}/>
               </div>
               <div className="photo-input">
                 <div className="photo-upload-description">
