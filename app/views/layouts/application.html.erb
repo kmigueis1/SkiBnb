@@ -27,6 +27,11 @@
         upload_preset: '<%= ENV["UPLOAD_PRESET"] %>'
       };
     </script>
+<!--
+    <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDmI0NpJGGiy85O0lnTt8n0zYKWxlMG9k">
+     </script> -->
+      <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyB5pUBS8ZOkjf8ogdGgjlGHy-qxGxAxqjg" %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>

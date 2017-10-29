@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeTile from './home_tile'
+import HomeIndexMap from '../home_map/home_index_map';
 
 class HomesIndex extends React.Component {
   constructor (props) {
@@ -20,7 +21,11 @@ class HomesIndex extends React.Component {
           {homes}
         </div>
         <div className="homes-map">
-
+          <div className="homes-map-content">
+            <div className="maps-wrapper">
+              <HomeIndexMap />
+            </div>
+          </div>
         </div>
       </div>
     );
