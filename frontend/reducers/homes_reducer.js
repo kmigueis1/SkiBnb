@@ -6,7 +6,9 @@ const HomesReducer = (state = {}, action) => {
   let newState;
   switch(action.type){
     case RECEIVE_ALL_HOMES:
+      console.log("action.homes: ", action.homes);
       newState = Object.assign({}, state, action.homes);
+      newState = action.homes;
       return newState;
     case RECEIVE_HOME:
       newState = Object.assign({}, state, {[action.home.id]: action.home});

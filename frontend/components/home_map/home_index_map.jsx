@@ -6,7 +6,7 @@ class HomeIndexMap extends React.Component {
   componentDidMount(){
     const mapOptions ={
       center: { lat: 40.751457, lng: -73.983474 },
-      zoom: 9
+      zoom: 7
     }
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
@@ -20,6 +20,7 @@ class HomeIndexMap extends React.Component {
       this.props.updateBounds(bounds);
     })
   }
+
 
   componentWillReceiveProps(){
     this.MarkerManager.updateMarkers(this.props.homes);
