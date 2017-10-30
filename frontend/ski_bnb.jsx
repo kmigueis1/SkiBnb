@@ -19,5 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchHomes = fetchHomes;
   window.dispatch = store.dispatch;
+  window.getState = store.getState;
   ReactDOM.render(<Root store={store}/>, root);
 });

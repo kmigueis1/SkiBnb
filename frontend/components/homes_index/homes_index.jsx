@@ -8,7 +8,7 @@ class HomesIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchHomes();
+    // this.props.fetchHomes();
   }
 
   render() {

@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchHomes: () => (dispatch(fetchHomes())),
-    updateBounds: () => (dispatch(updateBounds()))
+    updateBounds: (bounds) => (dispatch(updateBounds(bounds)))
     // fetchHome: (id) => (dispatch(fetchHome(id))),
     // createHome: (home) => (dispatch(createHome(home))),
     // updateHome: (home) => (dispatch(updateHome(home))),

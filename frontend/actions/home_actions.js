@@ -37,8 +37,8 @@ export const receiveErrors = (errors) => {
 //thunks
 
 
-export const fetchHomes = () => (dispatch) => {
-  return ApiUtil.fetchHomes().then((homes) => (dispatch(receiveAllHomes(homes))));
+export const fetchHomes = (filters) => (dispatch) => {
+  return ApiUtil.fetchHomes(filters).then((homes) => (dispatch(receiveAllHomes(homes))));
 }
 
 export const fetchHome = (id) => (dispatch) => {

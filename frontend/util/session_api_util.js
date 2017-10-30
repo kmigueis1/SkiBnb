@@ -30,8 +30,6 @@ export const updateUser = (user) => {
 };
 
 export const updateUserPhoto = (formData, userId) => {
-  console.log(userId);
-  console.log("hello there");
   return $.ajax({
     method: 'PATCH',
     url: `api/users/${userId}`,

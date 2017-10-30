@@ -5,8 +5,8 @@ class HomeIndexMap extends React.Component {
 
   componentDidMount(){
     const mapOptions ={
-      center: { lat: 37.7758, lng: -122.435 },
-      zoom: 13
+      center: { lat: 40.751457, lng: -73.983474 },
+      zoom: 9
     }
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);

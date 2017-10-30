@@ -37,7 +37,6 @@ class UploadPhotoForm extends React.Component {
     userFields.forEach((field) => {
       formData.append(`user[${field}]`, this.props.currentUser[field]);
     })
-    console.log(this.props.currentUser.id);
     this.props.updateUserPhoto(formData, this.props.currentUser.id);
   }
 

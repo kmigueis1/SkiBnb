@@ -63,8 +63,6 @@ export const updateUser =  (user) => (dispatch) => {
 };
 
 export const updateUserPhoto = (formData, userId) => (dispatch) => {
-  console.log(userId);
-  console.log("in thunk action");
   return ApiUtil.updateUserPhoto(formData, userId)
   .then((user) => {
     dispatch(receiveCurrentUser(user));
