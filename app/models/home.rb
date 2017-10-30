@@ -2,28 +2,32 @@
 #
 # Table name: homes
 #
-#  id           :integer          not null, primary key
-#  host_id      :integer          not null
-#  title        :string           not null
-#  address      :string           not null
-#  latitude     :float            not null
-#  longitude    :float            not null
-#  price        :float            not null
-#  bedrooms     :integer          not null
-#  beds         :integer          not null
-#  baths        :integer          not null
-#  description  :text             not null
-#  kitchen      :boolean
-#  tv           :boolean
-#  wifi         :boolean
-#  washer       :boolean
-#  dryer        :boolean
-#  parking      :boolean
-#  cancellation :string           not null
-#  max_guests   :integer          not null
-#  minimum_stay :integer
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id                 :integer          not null, primary key
+#  host_id            :integer          not null
+#  title              :string           not null
+#  address            :string           not null
+#  latitude           :float            not null
+#  longitude          :float            not null
+#  price              :float            not null
+#  bedrooms           :integer          not null
+#  beds               :integer          not null
+#  baths              :integer          not null
+#  description        :text             not null
+#  kitchen            :boolean
+#  tv                 :boolean
+#  wifi               :boolean
+#  washer             :boolean
+#  dryer              :boolean
+#  parking            :boolean
+#  cancellation       :string           not null
+#  max_guests         :integer          not null
+#  minimum_stay       :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 class Home < ApplicationRecord

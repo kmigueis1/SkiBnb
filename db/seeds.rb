@@ -25,3 +25,10 @@ Home.create({host_id: 2, title: 'Luzury Lakefront Logcabin', address: '25 Berlin
 Home.create({host_id: 2, title: 'Hunter Mountain Condo', address: '25 Berlin Ave, New York, NY', latitude: 41.187133, longitude: -79.499885, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
 Home.create({host_id: 2, title: 'Moutain View Galore', address: '25 Berlin Ave, New York, NY', latitude: 41.869769, longitude: -79.159309, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
 Home.create({host_id: 2, title: 'Seasonal Rental', address: '25 Berlin Ave, New York, NY', latitude: 43.504877, longitude: -75.156023, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
+
+
+
+Booking.create({start_date: '9/17/16', end_date: '9/21/16', user_id: 1, home_id: 2})
+Booking.create({start_date: '10/17/16', end_date: '10/21/16', user_id: 1, home_id: 2})
+Booking.create({start_date: '11/17/16', end_date: '11/21/16', user_id: 1, home_id: 2})
+Booking.create({start_date: '12/17/16', end_date: '12/21/16', user_id: 1, home_id: 2})
