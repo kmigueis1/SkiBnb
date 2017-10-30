@@ -23,7 +23,7 @@ class HomesIndex extends React.Component {
         <div className="homes-map">
           <div className="homes-map-content">
             <div className="maps-wrapper">
-              <HomeIndexMap />
+              <HomeIndexMap homes={Object.values(this.props.homes)} updateBounds={this.props.updateBounds} />
             </div>
           </div>
         </div>

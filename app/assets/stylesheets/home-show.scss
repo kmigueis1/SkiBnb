@@ -1,5 +1,39 @@
 .home-show-container{
 
+  .image-container {
+    width: 100%;
+    height: 500px;
 
-  
+    .image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .home-show-body {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    font-family: sans-serif;
+    color: #484848;
+
+    .home-summary {
+      border-bottom: 1px solid lightgrey;
+    }
+
+    .section {
+        border-bottom: 1px solid lightgrey;
+        padding: 24px 0;
+
+        .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import MarkerManager from '../../util/marker_manager_util'
 
 class HomeIndexMap extends React.Component {
 
@@ -8,6 +9,20 @@ class HomeIndexMap extends React.Component {
       zoom: 13
     }
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager.updateMarkers(this.props.homes);
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const mapBounds = this.map.getBounds()
+      const bounds = {
+        northEast: { lat: mapBounds.f.f, lng: mapBounds.b.f },
+        southWest: { lat: mapBounds.f.b, lng: mapBounds.b.b }
+      }
+      this.props.updateBounds(bounds);
+    })
+  }
+
+  componentWillReceiveProps(){
+    this.MarkerManager.updateMarkers(this.props.homes);
   }
   render(){
     return(

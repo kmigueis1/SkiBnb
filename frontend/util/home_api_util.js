@@ -1,7 +1,12 @@
-export const fetchHomes = () => {
+export const fetchHomes = (filters) => {
+  let bounds;
+  if(filters){
+    bounds = filters.bounds;
+  }
   return $.ajax({
     method: 'GET',
     url: 'api/homes',
+    data: {bounds: bounds}
   });
 };
 
