@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { fetchHomes } from './util/home_api_util';
+import { fetchBookings, fetchBooking, createBooking, updateBooking, deleteBooking } from './util/booking_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -16,7 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
   } else{
     store = configureStore();
   }
-
+  
+  window.fetchBookings = fetchBookings;
+  window.fetchBooking = fetchBooking;
+  window.createBooking = createBooking;
+  window.updateBooking = updateBooking;
+  window.deleteBooking = deleteBooking;
   window.fetchHomes = fetchHomes;
   window.dispatch = store.dispatch;
   window.getState = store.getState;

@@ -1,4 +1,4 @@
-class Api::BoookingsController < ApplicationController
+class Api::BookingsController < ApplicationController
 
   def index
 
@@ -24,7 +24,8 @@ class Api::BoookingsController < ApplicationController
 
 
   def create
-    @booking = Booking.new(home_params)
+
+    @booking = Booking.new(booking_params)
     if @booking.save
       render :show
     else

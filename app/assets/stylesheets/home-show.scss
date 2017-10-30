@@ -17,22 +17,33 @@
     margin: 0 auto;
     padding: 0 24px;
     font-family: sans-serif;
+    // .home_show-centered{
+    //   width: 1032px;
+    //   margin: 0 auto;
+    //   display: flex;
+      .home-show-content{
+        width: 610px;
+          .home-summary {
+            border-bottom: 1px solid lightgray;
+          }
 
+          .section {
+              border-bottom: 1px solid lightgrey;
+              padding: 24px 0;
 
-    .home-summary {
-      border-bottom: 1px solid lightgray;
-    }
-
-    .section {
-        border-bottom: 1px solid lightgrey;
-        padding: 24px 0;
-
-        .section-title {
-            font-size: 17px;
-            font-weight: bold;
-            margin-bottom: 20px;
+              .section-title {
+                  font-size: 17px;
+                  font-weight: bold;
+                  margin-bottom: 20px;
+              }
+          }
         }
-    }
+      .booking-widget{
+        height: 400px;
+        width: 380px;
+        background-color: beige;
+      }
+    // }
 
   }
 }

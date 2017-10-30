@@ -7,5 +7,5 @@ json.homeId @booking.home_id
 
 # $.ajax({
 #   method: 'GET',
-#   url: 'api/bookings'
+#   url: 'api/bookings/3',
 #   })
