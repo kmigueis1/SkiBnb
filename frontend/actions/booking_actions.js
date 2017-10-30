@@ -1,4 +1,5 @@
 import * as ApiUtil from '../util/booking_api_util';
+import { receiveBookedHomes } from './home_actions';
 
 export const RECEIVE_ALL_BOOKINGS = 'RECEIVE_ALL_BOOKINGS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
@@ -37,8 +38,15 @@ export const receiveErrors = (errors) => {
 //thunks
 
 
-export const fetchBookings = (filters) => (dispatch) => {
-  return ApiUtil.fetchBookings(filters).then((bookings) => (dispatch(receiveAllBookings(bookings))));
+// export const fetchBookings = () => (dispatch) => {
+//   return ApiUtil.fetchBookings().then((bookingsWithHomes) => {
+//     dispatch(receiveAllBookings(bookingsWithHomes.bookings));
+//     dispatch(receiveBookedHomes(bookingsWithHomes.homes))});
+// }
+
+export const fetchBookings = () => (dispatch) => {
+  console.log("im in fetchbookings");
+  return ApiUtil.fetchBookings().then((bookings) => (dispatch(receiveAllBookings(bookings))));
 }
 
 export const fetchBooking = (id) => (dispatch) => {

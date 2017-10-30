@@ -8,7 +8,8 @@ class BookingWidget extends React.Component {
     this.state = {
       startDate: "2018-01-20",
       endDate: "2018-01-28",
-      selected: "1 guest"
+      selected: "1 guest",
+      userMessage: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartDate = this.handleStartDate.bind(this);
@@ -29,6 +30,7 @@ class BookingWidget extends React.Component {
           home_id: this.props.homeId
         }
       );
+      this.setState({userMessage: "Congratulations, you successfully created a booking!"})
     } else {
 
     }
@@ -52,8 +54,10 @@ class BookingWidget extends React.Component {
     for(let i = 1; i <= this.props.maxGuests; i++){
       options.push(<option key={i} value={i}>{i + " guest"}</option>)
     }
+    console.log(this.state.userMessage);
     return(
       <div className="booking-widget">
+        <div className="booking-user-message"><span>{this.state.userMessage}</span></div>
         <form onSubmit={this.handleSubmit}>
           <input type="date" className="startDate" onChange={this.handleStartDate} value={this.state.startDate}></input>
           <input type="date" className="endDate" onChange={this.handleEndDate} value={this.state.endDate}></input>

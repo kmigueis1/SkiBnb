@@ -18,7 +18,7 @@ class DropDown extends React.Component {
           <Link to='/user/edit'><span>Edit Profile</span></Link>
         </div>
         <div className='drop-down-item'>
-          <span>Account Settings</span>
+          <Link to='/account/bookings'><span>My Bookings</span></Link>
         </div>
         <div onClick={this.props.logout} className='drop-down-item last-item'>
           <span>Log Out</span>

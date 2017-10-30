@@ -21,6 +21,14 @@ class User < ApplicationRecord
   has_attached_file :avatar, default_url: "profile-icon.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
+  has_many :homes,
+  foreign_key: :host_id,
+  class_name: 'Home'
+
+  has_many :bookings,
+  foreign_key: :user_id,
+  class_name: 'Booking'
+
   after_initialize :ensure_session_token
 
   attr_reader :password

@@ -58,6 +58,36 @@ export const deleteHome = (home) => (dispatch) => {
 };
 
 
+// export const RECEIVE_BOOKED_HOMES = "RECEIVE_BOOKED_HOMES";
+// export const RECEIVE_BOOKED_HOME = "RECEIVE_BOOKED_HOME";
+// export const REMOVE_BOOKED_HOME = "REMOVE_HOME";
+//
+// export const receiveBookedHomes = (homes) => {
+//   return {
+//     type: RECEIVE_BOOKED_HOMES,
+//     homes: homes
+//   };
+// };
+//
+// export const receiveBookedHome = (home) => {
+//   return {
+//     type: RECEIVE_BOOKED_HOMES,
+//     homes: home
+//   };
+// };
+//
+// export const removeBookedHome = (id) => {
+//   return {
+//     type: REMOVE_BOOKED_HOME,
+//     id: id
+//   };
+// };
+
+
+
+
+
+
 
 
 

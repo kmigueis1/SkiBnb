@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 
 const EntitiesReducer = combineReducers({
   homes: HomesReducer,
-  bookings: BookingsReducer
+  bookings: BookingsReducer,
 });
 
 

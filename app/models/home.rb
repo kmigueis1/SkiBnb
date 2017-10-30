@@ -39,6 +39,14 @@ class Home < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 
+belongs_to :host,
+foreign_key: :host_id,
+class_name: 'User'
+
+has_many :bookings,
+foreign_key: :home_id,
+class_name: 'Booking'
+
   def self.in_bounds(bounds)
     self.where("latitude < ?", bounds[:northEast][:lat]).where("longitude < ?", bounds[:northEast][:lng])
       .where("latitude > ?", bounds[:southWest][:lat]).where("longitude > ?", bounds[:southWest][:lng])
