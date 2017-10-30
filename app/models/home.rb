@@ -50,7 +50,6 @@ class_name: 'Booking'
   def self.in_bounds(bounds)
     self.where("latitude < ?", bounds[:northEast][:lat]).where("longitude < ?", bounds[:northEast][:lng])
       .where("latitude > ?", bounds[:southWest][:lat]).where("longitude > ?", bounds[:southWest][:lng])
-
   end
 
 end

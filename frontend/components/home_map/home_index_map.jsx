@@ -13,6 +13,7 @@ class HomeIndexMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.homes);
     google.maps.event.addListener(this.map, 'idle', () => {
       const mapBounds = this.map.getBounds()
+    
       const bounds = {
         northEast: { lat: mapBounds.f.f, lng: mapBounds.b.f },
         southWest: { lat: mapBounds.f.b, lng: mapBounds.b.b }

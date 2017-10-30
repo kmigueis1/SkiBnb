@@ -77,10 +77,10 @@
         height: 100%;
 
         #map-container{
-          height: 100%;
+          height: calc(100% - 81px);
           width: 100%;
           position: absolute;
-          top: 0px;
+          top: 81px;
           left: 0px;
         }
       }
