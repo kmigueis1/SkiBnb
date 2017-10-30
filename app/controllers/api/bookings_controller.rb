@@ -40,7 +40,7 @@ class Api::BookingsController < ApplicationController
 
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :user_id, :home_id, presence: true)
+    params.require(:booking).permit(:start_date, :end_date, :user_id, :home_id)
   end
 
 end

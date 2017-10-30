@@ -26,7 +26,7 @@ class BookingWidget extends React.Component {
           start_date: this.state.startDate,
           end_date: this.state.endDate,
           user_id: this.props.currentUser.id,
-          home_id: this.homeId
+          home_id: this.props.homeId
         }
       );
     } else {

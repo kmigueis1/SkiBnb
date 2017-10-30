@@ -46,6 +46,7 @@ export const fetchBooking = (id) => (dispatch) => {
 }
 
 export const createBooking = (booking) => (dispatch) => {
+  console.log(booking);
   return ApiUtil.createBooking(booking).then((booking) => (dispatch(receiveBooking(booking))));
 };
 
