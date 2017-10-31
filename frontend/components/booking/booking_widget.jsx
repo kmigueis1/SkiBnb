@@ -31,6 +31,7 @@ class BookingWidget extends React.Component {
         }
       );
       this.setState({userMessage: "Congratulations, you successfully created a booking!"})
+      this.props.history.push("/account/bookings");
     } else {
       this.setState({userMessage: "Please sign in to make a booking."})
     }
@@ -83,7 +84,7 @@ class BookingWidget extends React.Component {
             </select>
           </div>
           <div className="booking-submit">
-            <button>Book</button>
+              <button>Book</button>
           </div>
         </form>
         <div className="charge-message">

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { createBooking } from '../../actions/booking_actions';
+import { withRouter } from 'react-router-dom';
 import BookingWidget from './booking_widget';
 
 const mapStateToProps = (state, ownProps) => {
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookingWidget);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BookingWidget));

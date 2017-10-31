@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { deleteBooking, updateBooking, fetchBookings, fetchBooking } from '../../actions/booking_actions';
+import { withRouter } from 'react-router-dom';
 import UserBookings from './user_bookings';
 
 const mapStateToProps = (state, ownProps) => {
