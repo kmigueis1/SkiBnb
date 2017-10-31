@@ -146,7 +146,7 @@ $medium-color: rgb(72, 72, 72);
       .booking-widget{
         height: 330px;
         width: 380px;
-        background-color: white;
+        // background-color: white;
         position: relative;
         top: -50px;
 
@@ -154,7 +154,7 @@ $medium-color: rgb(72, 72, 72);
           height: 50px;
           display: flex;
           align-items: center;
-          background-color: rgba(63, 63, 63, 0.9);
+          background-color: rgba(63, 63, 63, 0.85);
           color: white;
           .price-spans{
             margin-left: 20px;
@@ -176,8 +176,10 @@ $medium-color: rgb(72, 72, 72);
           color: red;
           font-size: 13px;
           margin-bottom: 5px;
+          background: white;
         }
           .booking-form-div{
+            background: white;
             border: 1px solid lightgray;
               .booking-user-message{
                 height: 20px;
