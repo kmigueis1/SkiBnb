@@ -11,6 +11,7 @@ Booking.destroy_all
 
 
 User.create!({email: 'guest@gmail.com', password: 'password', first_name: 'guest', last_name: 'guest', phone: '888-867-5309' });
+User.create!({email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Kevin', last_name: 'Migueis', phone: '888-867-5309'});
 
 Home.create!({host_id: 2, title: 'Cozy Ski Home', address: '25 Berlin Ave, New York, NY', latitude: 40.974937, longitude: -74.019699, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
 Home.create!({host_id: 2, title: 'Charming Country Home', address: '25 Berlin Ave, New York, NY', latitude: 41.430582, longitude: -74.605476, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
@@ -31,7 +32,7 @@ Home.create!({host_id: 2, title: 'Seasonal Rental', address: '25 Berlin Ave, New
 
 
 
-Booking.create!({start_date: '9/17/16', end_date: '9/21/16', user_id: 1, home_id: 2})
-Booking.create!({start_date: '10/17/16', end_date: '10/21/16', user_id: 1, home_id: 2})
-Booking.create!({start_date: '11/17/16', end_date: '11/21/16', user_id: 1, home_id: 2})
-Booking.create!({start_date: '12/17/16', end_date: '12/21/16', user_id: 1, home_id: 2})
+Booking.create!({start_date: '2016-09-16', end_date: '2016-09-21', user_id: 1, home_id: 2})
+Booking.create!({start_date: '2016-10-17', end_date: '2016-10-21', user_id: 1, home_id: 2})
+Booking.create!({start_date: '2016-11-17', end_date: '2016-11-21', user_id: 1, home_id: 2})
+Booking.create!({start_date: '2016-12-17', end_date: '2016-12-17', user_id: 1, home_id: 2})
