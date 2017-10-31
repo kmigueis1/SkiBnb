@@ -8,7 +8,8 @@ end
 @bookings.each do |booking|
   json.set! booking.id do
     json.extract! booking, :id, :start_date, :end_date, :user_id, :home_id
-    json.extract! booked_homes[i], :title, :description
+    json.extract! booked_homes[i], :title, :description, :host_id
+    json.host_image asset_path(booking.home.host.avatar.url)
     json.image_url asset_path(booked_homes[i].image.url)
   end
   i += 1

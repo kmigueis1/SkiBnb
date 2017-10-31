@@ -32,9 +32,15 @@ class BookingItem extends React.Component{
     let endDateYear = endDate[0];
     let endDateMonth = parseInt(endDate[1]);
     let endDateDay = endDate[2];
-
+    let hostImage = booking.host_image;
+    console.log(this.props);
     return(
       <div className="booking-item">
+        <div className="host-photo">
+          <div className="host-photo-radius">
+            <img src={hostImage}></img>
+          </div>
+        </div>
         <div className="booking-photo"><img src={booking.image_url}></img></div>
         <div className="booking-summary">
           <div className="booking-title"><span>{booking.title}</span></div>

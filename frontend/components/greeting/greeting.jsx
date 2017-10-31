@@ -27,6 +27,7 @@ class Greeting extends React.Component {
 render(){
   // <img src={user.avatar_url} ></img>
   //this img tag above is how you can insert the user's image
+  console.log("user image: ", this.props.currentUser.avatar_url);
   return (
     this.props.currentUser ?
     (

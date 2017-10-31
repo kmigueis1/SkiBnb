@@ -22,4 +22,5 @@ class Booking < ApplicationRecord
   belongs_to :home,
   foreign_key: :home_id,
   class_name: 'Home'
+
 end

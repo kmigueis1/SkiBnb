@@ -18,7 +18,7 @@ class UserBookings extends React.Component{
 
     return(
       <div className="user-bookings-container">
-        <div><span>Current Trips</span></div>
+        <div className="trips-header"><span>Current Trips</span></div>
         <div className="bookings-container">
           {bookings}
         </div>
