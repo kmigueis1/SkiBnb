@@ -48,8 +48,23 @@ foreign_key: :home_id,
 class_name: 'Booking'
 
   def self.in_bounds(bounds)
-    self.where("latitude < ?", bounds[:northEast][:lat]).where("longitude < ?", bounds[:northEast][:lng])
-      .where("latitude > ?", bounds[:southWest][:lat]).where("longitude > ?", bounds[:southWest][:lng])
+    north_east_lat = bounds[:northEast][:lat]
+    north_east_lng = bounds[:northEast][:lng]
+    south_west_lat = bounds[:southWest][:lat]
+    south_west_lng = bounds[:southWest][:lng]
+
+    self.where("latitude < ?", north_east_lat).where("longitude < ?", north_east_lng)
+      .where("latitude > ?", south_west_lat).where("longitude > ?", south_west_lng)
+
+      #
+      # db.execute(<<-SQL, north_east_lat: north_east_lat, north_east_lng: nort_east_lng, south_west_lat: south_west_lat, south_west_lng: south_west_lng )
+      #   SELECT
+      #     *
+      #   FROM
+      #   homes
+      #   WHERE
+      #   homes.latitude < north_east_lat AND homes.longitude < north_east_lng AND homes.latitude > south_west_lat AND homes.longitude > south_west_lng
+      # SQL
   end
 
 end
