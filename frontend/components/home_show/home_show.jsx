@@ -2,7 +2,11 @@ import React from 'react';
 import BookingWidgetContainer from '../booking/booking_widget_container';
 
 class HomeShow extends React.Component {
-  componentWillMount(){
+  // componentWillMount(){
+  //   this.props.fetchHome(this.props.match.params.id);
+  // }
+
+  componentDidMount(){
     this.props.fetchHome(this.props.match.params.id);
   }
 

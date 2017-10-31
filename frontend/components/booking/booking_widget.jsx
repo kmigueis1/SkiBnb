@@ -6,8 +6,8 @@ class BookingWidget extends React.Component {
     super(props);
     // let currentTime =
     this.state = {
-      startDate: "2018-01-20",
-      endDate: "2018-01-28",
+      startDate: "",
+      endDate: "",
       selected: "1 guest",
       userMessage: ""
     }
@@ -32,7 +32,7 @@ class BookingWidget extends React.Component {
       );
       this.setState({userMessage: "Congratulations, you successfully created a booking!"})
     } else {
-
+      this.setState({userMessage: "Please sign in to make a booking."})
     }
   }
 
@@ -57,15 +57,39 @@ class BookingWidget extends React.Component {
     console.log(this.state.userMessage);
     return(
       <div className="booking-widget">
+        <div className="booking-price-bar">
+          <div className="price-spans">
+            <span className="booking-span1">${`${this.props.price}`} </span>
+            <span className="booking-span2">per night</span>
+          </div>
+        </div>
+        <div className="booking-form-div">
         <div className="booking-user-message"><span>{this.state.userMessage}</span></div>
         <form onSubmit={this.handleSubmit}>
-          <input type="date" className="startDate" onChange={this.handleStartDate} value={this.state.startDate}></input>
-          <input type="date" className="endDate" onChange={this.handleEndDate} value={this.state.endDate}></input>
-          <select onChange={this.handleSelect} value={this.state.selected}>
-            {options}
-          </select>
-          <button>Book</button>
+          <div className="date-inputs">
+            <div className="check-in">
+              <label>Check In </label>
+              <input type="date" className="startDate" onChange={this.handleStartDate} value={this.state.startDate}></input>
+            </div>
+            <div className="check-out">
+              <label>Check Out</label>
+              <input type="date" className="endDate" onChange={this.handleEndDate} value={this.state.endDate}></input>
+            </div>
+          </div>
+          <div className="guest-selector">
+            <label>Guests</label>
+            <select onChange={this.handleSelect} value={this.state.selected}>
+              {options}
+            </select>
+          </div>
+          <div className="booking-submit">
+            <button>Book</button>
+          </div>
         </form>
+        <div className="charge-message">
+          <span>You won't be charged yet</span>
+        </div>
+      </div>
       </div>
 
     );

@@ -1,6 +1,8 @@
 $light-color: rgb(118, 118, 118);
 $medium-color: rgb(72, 72, 72);
-
+// $booking-price-color: rgb(63, 63, 63);
+// $alpha: 0.91;
+// $booking-price-alpha: rgba
 .home-show-container{
 
   .icon {
@@ -142,12 +144,128 @@ $medium-color: rgb(72, 72, 72);
           }
         }
       .booking-widget{
-        height: 400px;
+        height: 330px;
         width: 380px;
-        background-color: beige;
+        background-color: white;
+        position: relative;
+        top: -50px;
 
+        .booking-price-bar{
+          height: 50px;
+          display: flex;
+          align-items: center;
+          background-color: rgba(63, 63, 63, 0.9);
+          color: white;
+          .price-spans{
+            margin-left: 20px;
+            .booking-span1{
+              font-family: verdana;
+              font-size: 20px;
+              font-weight: 600;
+            }
+            .booking-span2{
+              font-family: sans-serif;
+              font-size: 13px;
+              font-weight: 100;
+              letter-spacing: 1px;
+            }
+          }
+        }
         .booking-user-message{
-          height: 20px;
+          text-align: center;
+          color: red;
+          font-size: 13px;
+          margin-bottom: 5px;
+        }
+          .booking-form-div{
+            border: 1px solid lightgray;
+              .booking-user-message{
+                height: 20px;
+              }
+              .date-inputs{
+                width: 92%;
+                margin: 0 auto;
+                display: flex;
+                margin-bottom: 15px;
+                .check-in{
+                  font-size: 14px;
+                  input{
+                    margin-top: 10px;
+                    width: 92%;
+                    height: 42px;
+                    font-family: sans-serif;
+                    color: gray;
+                    font-size: 14px;
+                    padding-left: 11px;
+                    // border: 0.5px solid lightgray;
+                  }
+                }
+                .check-out{
+                  font-size: 14px;
+                  input{
+                    margin-top: 10px;
+                    width: 92%;
+                    height: 42px;
+                    font-family: sans-serif;
+                    color: gray;
+                    font-size: 14px;
+                    padding-left: 11px;
+                    // border: 0.5px solid lightgray;
+                  }
+                }
+              }
+              .guest-selector{
+                width: 92%;
+                margin: 0 auto;
+                font-size: 14px;
+                select{
+                  margin-top: 10px;
+                  height: 42px;
+                  width: 100%;
+                  background-color: white;
+                  border: 1px solid gray;
+                  font-size: 14px;
+                  color: gray;
+                  border: 1px solid lightgray;
+                  &:hover{
+                    cursor: pointer;
+                  }
+                }
+              }
+              .booking-submit{
+                width: 92%;
+                margin: 0 auto;
+                margin-top: 18px;
+                button{
+                  width: 100%;
+                  height: 42px;
+                  border-radius: 5px;
+                  color: white;
+                  background-color: #ff5a5f;
+                  border: #ff5a5f;
+                  font-size: 18px;
+                  font-family: sans-serif;
+                  font-weight: 400;
+                  letter-spacing: 1px;
+                  &:hover{
+                    cursor: pointer;
+                  }
+                }
+              }
+              .charge-message{
+                width: 92%;
+                margin: 0 auto;
+                align-items: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                display: flex;
+                justify-content: center;
+                span{
+                  font-family: sans-serif;
+                  font-size: 11px;
+                  color: gray;
+                }
+              }
         }
       }
     // }
