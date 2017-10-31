@@ -12,18 +12,16 @@ class HomeShow extends React.Component {
     if(!home || !home.amenities) {
       return null;
     }
-    let amenities = Object.keys(home.amenities).map((amenity)=>{
-      return (<div key={amenity}><i className={amenity}></i><span>{amenity}</span></div>);
-    })
+
     let cleaningFee = (home.price * 0.15);
-    let sleepingArrangements = [];
-    for(let i = 0; i < home.beds; i++){
-      sleepingArrangements.push(<div key={i}>
-        <i></i>
-        <span>Bedroom {i}</span>
-        <span>{home.beds} double beds</span>
-      </div>);
-    }
+    // let sleepingArrangements = [];
+    // for(let i = 0; i < home.beds; i++){
+    //   sleepingArrangements.push(<div key={i}>
+    //     <i></i>
+    //     <span>Bedroom {i}</span>
+    //     <span>2 double beds</span>
+    //   </div>);
+    // }
 
     const backgroundImageStyles = {
       backgroundImage: `url(${home.image_url})`
@@ -43,12 +41,16 @@ class HomeShow extends React.Component {
           <div className="home-show-centered">
             <div className="home-show-content">
               <div className="home-summary">
-                <h1>{home.title}</h1>
+                <div>
+                  <h1>{home.title}</h1>
+                  <span>Entire Home</span>
+                </div>
+
                 <div className="home-stats">
-                  <span><i className=""></i>{home.maxGuests} guests</span>
-                  <span><i className=""></i>{home.bedrooms} bedrooms</span>
-                  <span><i className=""></i>{home.beds} beds</span>
-                  <span><i className=""></i>{home.baths} baths</span>
+                  <span><i className="icon fa fa-users"></i>{home.maxGuests} guests</span>
+                  <span><i className="icon fa fa-home"></i>{home.bedrooms} bedrooms</span>
+                  <span><i className="icon fa fa-bed"></i>{home.beds} beds</span>
+                  <span><i className="icon fa fa-bathtub"></i>{home.baths} baths</span>
                 </div>
                 <div className="description">
                   <span>The Space</span>
@@ -57,16 +59,26 @@ class HomeShow extends React.Component {
             </div>
               <div className="section amenities">
                 <div className="section-title">Amenities</div>
-                <div>{amenities}</div>
+                <div className="content">
+                  <div><i className="icon fa fa-spoon"></i>Kitchen</div>
+                  <div><i className="icon fa fa-tv"></i>TV</div>
+                  <div><i className="icon fa fa-wifi"></i>WiFi</div>
+                  <div><i className="icon fa fa-shopping-basket"></i>Washer</div>
+                  <div><i className="icon fa fa-sun-o"></i>Dryer</div>
+                  <div><i className="icon fa fa-car"></i>Parking</div>
+                </div>
               </div>
               <div className ="section prices">
                 <div className="section-title">Prices</div>
                 <div>Weekly Discount: <span>None</span></div>
-                <div>Cleaning Fee <span>{cleaningFee}</span></div>
+                <div>Cleaning Fee <span>${cleaningFee}</span></div>
               </div>
               <div className="section sleeping-arrangements">
                 <div className="section-title">Sleeping Arrangements</div>
-                <div className="content">{sleepingArrangements}</div>
+                <div className="content">
+                  <div className="item"><i className="icon fa fa-bed"></i><div>Bedroom 1</div><span>1 queen bed</span></div>
+                  <div className="item"><i className="icon fa fa-bed"></i><div>Bedroom 2</div><span>1 double bed</span></div>
+                </div>
               </div>
               <div className="section cancellations">
                 <div className="section-title">Cancellations</div>
@@ -75,7 +87,7 @@ class HomeShow extends React.Component {
               </div>
               <div className="section availability">
                 <div className="section-title">Availability</div>
-                <div><span>{home.minStay} night</span> minimum stay</div>
+                <div>{home.minStay} night<span> minimum stay</span></div>
               </div>
             </div>
             <BookingWidgetContainer homeId={home.id} maxGuests={home.maxGuests}  price={home.price}/>

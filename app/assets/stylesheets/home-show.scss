@@ -1,4 +1,13 @@
+$light-color: rgb(118, 118, 118);
+$medium-color: rgb(72, 72, 72);
+
 .home-show-container{
+
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: $medium-color;
+  }
 
   .image-container {
     width: 100%;
@@ -17,12 +26,32 @@
     margin: 0 auto;
     padding: 0 24px;
     font-family: sans-serif;
-    // .home_show-centered{
-    //   width: 1032px;
-    //   margin: 0 auto;
-    //   display: flex;
+
+    .home-show-centered {
+      display: flex;
+      width: 85%;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+
+      + span {
+        color: $light-color;
+        font-weight: 300;
+      }
+    }
       .home-show-content{
-        width: 610px;
+        width: 55%;
+
+          .home-stats {
+            margin: 20px 0 30px;
+            span {
+              margin-right: 20px;
+              font-weight: 300;
+            }
+          }
           .home-summary {
             border-bottom: 1px solid lightgray;
           }
@@ -33,9 +62,83 @@
 
               .section-title {
                   font-size: 17px;
-                  font-weight: bold;
+                  color: inherit !important;
+                  font-weight: bold !important;
                   margin-bottom: 20px;
               }
+          }
+
+          .description {
+            span {
+              font-size: 14px;
+              font-weight: normal;
+            }
+
+            p {
+              color: $light-color;
+            }
+          }
+
+          .amenities {
+            .icon {
+              width: 30px;
+              height: 30px;
+              margin-right: 20px;
+              color: $light-color;
+            }
+
+            .content {
+              div {
+                margin: 10px 0;
+              }
+            }
+          }
+
+          .prices {
+            div {
+              color: $light-color;
+              font-weight: 300;
+              margin: 10px 0;
+                span {
+                  font-weight: 500;
+                  color: $medium-color;
+                }
+            }
+          }
+
+          .sleeping-arrangements {
+            .content {
+              display: flex;
+
+                .item {
+                  width: 50%;
+
+                  .icon {
+                    font-size: 40px;
+                    font-weight: 100;
+                  }
+                  div {
+                    margin: 10px 0;
+                  }
+                  span {
+                    color: $light-color;
+                  }
+                }
+            }
+          }
+
+          .cancellations {
+            div {
+              color: $light-color;
+              margin: 5px 0;
+              text-transform: capitalize;
+            }
+          }
+
+          .availability {
+            span {
+              color: $light-color;
+            }
           }
         }
       .booking-widget{

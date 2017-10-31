@@ -32,7 +32,7 @@ class MarkerManager {
 
   createMarkerFromHome(home){
     const marker = new google.maps.Marker({
-      position: { lat: home.latitude,  lng: home.longitude },
+      position: { lat: (home.latitude),  lng: (home.longitude) },
       map: this.map,
       title: String(home.price)
     })
