@@ -13,7 +13,7 @@ class UserBookings extends React.Component{
 
   render(){
     let bookings = this.props.bookings.map((booking) => {
-      return (<BookingItem key={booking.id} booking={booking}/>)
+      return (<BookingItem key={booking.id} booking={booking} deleteBooking={this.props.deleteBooking}/>)
     });
 
     return(

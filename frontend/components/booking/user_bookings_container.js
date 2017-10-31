@@ -11,9 +11,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    deleteBooking: (booking) => (dispatch(deleteBooking(booking))),
+    deleteBooking: (id) => (dispatch(deleteBooking(id))),
     updateBooking: (booking) => (dispatch(updateBooking(booking))),
-    fetchBookings: () => (dispatch(fetchBookings())),
+    fetchBookings: () => (dispatch(fetchBookings()))
   };
 };
 

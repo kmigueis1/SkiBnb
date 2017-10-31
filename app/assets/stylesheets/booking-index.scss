@@ -67,6 +67,24 @@
           font-family: verdana;
           font-size: 17px;
         }
+        .cancel-booking-button{
+          margin: 15px;
+          button{
+            width: 70%;
+            height: 42px;
+            border-radius: 5px;
+            color: white;
+            background-color: #ff5a5f;
+            border: #ff5a5f;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }

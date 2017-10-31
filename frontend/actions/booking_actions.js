@@ -62,6 +62,6 @@ export const updateBooking = (booking) => (dispatch) => {
   return ApiUtil.updateBooking(booking).then((booking) => (dispatch(receiveBooking(booking))));
 };
 
-export const deleteBooking = (booking) => (dispatch) => {
-  return ApiUtil.deleteBooking(booking).then((booking) => (dispatch(removeBooking(booking))));
+export const deleteBooking = (id) => (dispatch) => {
+  return ApiUtil.deleteBooking(id).then((booking) => (dispatch(removeBooking(booking.id))));
 };

@@ -4,7 +4,6 @@ import { Link }  from 'react-router-dom';
 class BookingItem extends React.Component{
   constructor(props){
     super(props);
-    console.log(props);
 
     this.months = {
       1: "Jan",
@@ -20,6 +19,12 @@ class BookingItem extends React.Component{
       11: "Nov",
       12: "Dec"
     }
+
+    this.handleCancellation = this.handleCancellation.bind(this);
+  }
+
+  handleCancellation(){
+    this.props.deleteBooking(this.props.booking.id);
   }
 
   render(){
@@ -51,6 +56,9 @@ class BookingItem extends React.Component{
           <div className="booking-title"><span>{booking.title}</span></div>
           <div className="booking-dates">
             <span>{this.months[startDateMonth]} {startDateDay} - {this.months[endDateMonth]} {endDateDay}, {endDateYear}</span>
+          </div>
+          <div className="cancel-booking-button">
+            <button onClick={this.handleCancellation}>Cancel Booking</button>
           </div>
         </div>
       </div>
