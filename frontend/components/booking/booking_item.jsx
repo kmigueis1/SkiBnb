@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link }  from 'react-router-dom';
 
 class BookingItem extends React.Component{
   constructor(props){
@@ -41,7 +42,11 @@ class BookingItem extends React.Component{
             <img src={hostImage}></img>
           </div>
         </div>
-        <div className="booking-photo"><img src={booking.image_url}></img></div>
+        <div className="booking-photo">
+          <Link to={`/homes/${booking.home_id}`}>
+            <img src={booking.image_url}></img>
+          </Link>
+          </div>
         <div className="booking-summary">
           <div className="booking-title"><span>{booking.title}</span></div>
           <div className="booking-dates">
