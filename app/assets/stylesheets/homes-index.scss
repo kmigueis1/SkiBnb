@@ -56,6 +56,34 @@
               font-size: 15px;
               font-weight: 100;
             }
+
+            .home-tile-review {
+              display: flex;
+                .stars{
+                  color: #008489;
+                  font-size: 14px;
+                  margin-right: 5px;
+
+                  i{
+                    margin-right: 3px;
+                  }
+                }
+
+                .num-reviews{
+                  font-size: 13px;
+                  font-family: helvetica;
+                  margin-top: 0.5px;
+                  margin-right: 7px;
+                }
+
+                .superhost{
+                  font-size: 10px;
+                  font-family: helvetica;
+                  margin-top: 0.5px;
+                  letter-spacing: 1px;
+                }
+
+            }
         }
 
     }

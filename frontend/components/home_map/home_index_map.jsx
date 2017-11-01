@@ -23,13 +23,15 @@ class HomeIndexMap extends React.Component {
 
 
       this.props.updateBounds(bounds);
+
     })
   }
 
-
-  componentWillReceiveProps(){
+  componentDidUpdate(){
     this.MarkerManager.updateMarkers(this.props.homes);
+
   }
+
   render(){
     return(
       <div id='map-container' ref={ map => this.mapNode = map }></div>
