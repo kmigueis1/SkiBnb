@@ -22,7 +22,8 @@ class Api::ReviewsController < ApplicationController
   end
 
   def show
-    @review = Review.find(params[:id])
+    # @review = Review.find(params[:id])
+    @review = Booking.find(params[:booking_id]).review
     render :show
   end
 

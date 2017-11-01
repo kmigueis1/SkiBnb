@@ -5,8 +5,8 @@ end
 
   i = 0
 @reviews.each do |review|
-  json.set! booking.id do
-    json.extract! booking, :id, :booking_id, :rating, :body
+  json.set! review.id do
+    json.extract! review, :id, :booking_id, :rating, :body
     json.extract! authors[i], :first_name
     json.author_image asset_path(authors[i].avatar.url)
   end
