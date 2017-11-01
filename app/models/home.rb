@@ -48,8 +48,8 @@ class Home < ApplicationRecord
   class_name: 'Booking'
 
   has_many :reviews,
-  foreign_key: :home_id,
-  class_name: 'Review'
+  through: :bookings,
+  source: :review
 
   def self.in_bounds(bounds)
     north_east_lat = bounds[:northEast][:lat]

@@ -7,14 +7,12 @@ Rails.application.routes.draw do
 
     resources :users, only: [:create, :show, :update]
     resource :session, only: [:create, :destroy]
-    resources :homes, only: [:index, :create, :update, :destroy]
-    resources :homes, only: [:show] do
-      resources :reviews, only: [:index, :create, :destroy]
+    resources :homes, only: [:index, :show, :create, :update, :destroy] do
+      resources :reviews, only: [:index]
     end
-    resources :bookings, only: [:index, :show, :create, :update, :destroy]
-    resources :reviews, only: [:show]
+    resources :bookings, only: [:index, :show, :create, :update, :destroy] do
+      resources :reviews, only: [:show, :destroy]
+    end
   end
-
-
 
 end

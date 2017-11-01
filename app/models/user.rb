@@ -30,8 +30,8 @@ class User < ApplicationRecord
   class_name: 'Booking'
 
   has_many :reviews,
-  foreign_key: :author_id,
-  class_name: 'Review'
+  through: :bookings,
+  source: :review
 
   after_initialize :ensure_session_token
 

@@ -23,4 +23,8 @@ class Booking < ApplicationRecord
   foreign_key: :home_id,
   class_name: 'Home'
 
+  has_one :review,
+  foreign_key: :booking_id,
+  class_name: 'Review'
+
 end

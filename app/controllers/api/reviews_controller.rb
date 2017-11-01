@@ -1,7 +1,8 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Review.find_by(home_id: params[:home_id])
+    @reviews = Home.find(params[:home_id]).reviews
+    # @reviews = Review.where("home_id = ?", params[:home_id])
     render :index
   end
 
@@ -27,7 +28,7 @@ class Api::ReviewsController < ApplicationController
 
 
   def review_params
-    params.require(:review).permit(:author_id, :home_id, :rating, :body)
+    params.require(:review).permit(:booking_id, :rating, :body)
   end
 
 end
