@@ -1,5 +1,6 @@
 import React from 'react';
 import BookingWidgetContainer from '../booking/booking_widget_container';
+import HomeReviewsContainer from '../review/home_reviews_container';
 
 class HomeShow extends React.Component {
   // componentWillMount(){
@@ -93,6 +94,7 @@ class HomeShow extends React.Component {
                 <div className="section-title">Availability</div>
                 <div>{home.minStay} night<span> minimum stay</span></div>
               </div>
+              <HomeReviewsContainer homeId={home.id}/>
             </div>
             <BookingWidgetContainer homeId={home.id} maxGuests={home.maxGuests}  price={home.price}/>
           </div>

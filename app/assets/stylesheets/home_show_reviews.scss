@@ -1,0 +1,52 @@
+.reviews-index{
+
+  .reviews-header {
+    font-size: 28px;
+    color: gray;
+    margin-bottom: 24px;
+  }
+  .review-item {
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    font-weight: 100;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+    .review-item-header {
+      display: flex;
+      .avatar {
+        margin-left: 5px;
+        margin-right: 20px;
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        overflow: hidden;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .name-date-wrapper{
+        .user-name{
+          margin: 3px;
+          color: #4e4e4e;
+          font-weight: bold;
+        }
+        .posting-date{
+
+        }
+      }
+      .stars-wrapper{
+        margin: 15px;
+        color: #008489;
+        i{
+          margin: 1px;
+        }
+      }
+      .review-body{
+        p{
+          margin: 20px;
+        }
+      }
+    }
+  }
+}
