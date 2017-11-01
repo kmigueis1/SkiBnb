@@ -12,7 +12,8 @@ class UserBookings extends React.Component{
   }
 
   render(){
-    let bookings = this.props.bookings.map((booking) => {
+    let currentBookings = this.props.bookings.map((booking) => {
+      console.log(booking);
       return (<BookingItem key={booking.id} booking={booking} deleteBooking={this.props.deleteBooking}/>)
     });
 
@@ -20,7 +21,10 @@ class UserBookings extends React.Component{
       <div className="user-bookings-container">
         <div className="trips-header"><span>Current Trips</span></div>
         <div className="bookings-container">
-          {bookings}
+          <div className="current-bookings-container">
+            
+          </div>
+          {currentBookings}
         </div>
       </div>
     );
