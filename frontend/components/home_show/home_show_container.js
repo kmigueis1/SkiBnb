@@ -8,7 +8,6 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchHome: (id) => (dispatch(fetchHome(id)))
