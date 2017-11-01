@@ -40,6 +40,11 @@ class BookingItem extends React.Component{
     let endDateDay = endDate[2];
     let hostImage = booking.host_image;
     // {`/account/bookings/${booking.id}/review`}
+    let pastBookingFunctionality = booking.review_id ?
+    (<div></div>) :
+    (<div className="review-link">
+    <Link to={`/account/bookings/${booking.id}/review`}>Leave a Review</Link>
+  </div>)
 
     let functionality = this.props.time === "current" ?
     (<div className="cancel-booking-button">
@@ -47,7 +52,7 @@ class BookingItem extends React.Component{
     </div>) :
     (
       <div className="review-link">
-      <Link exact to={`/account/bookings/${booking.id}/review`}>Leave a Review</Link>
+      <Link to={`/account/bookings/${booking.id}/review`}>Leave a Review</Link>
     </div>
     );
     console.log(this.props);

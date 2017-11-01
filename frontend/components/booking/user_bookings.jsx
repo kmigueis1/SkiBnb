@@ -14,7 +14,7 @@ class UserBookings extends React.Component{
 
 
   render(){
-
+    console.log("Hellooooo IM HERE", this.props);
     const createBookingDate = (booking) => {
       let endDate = booking.end_date.split("-");
       let endDateYear = parseInt(endDate[0]);
