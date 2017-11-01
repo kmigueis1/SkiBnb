@@ -100,6 +100,23 @@
             }
           }
         }
+        .review-container{
+          .stars{
+            color: #007a87;
+            margin-bottom: 15px;
+            .fa-star{
+              font-size: 18px;
+              margin: 1px;
+            }
+          }
+          .review-text{
+            margin: 0 auto;
+            margin-bottom: 15px;
+            font-family: sans-serif;
+            width: 250px;
+            border-bottom: 1px solid lightgray;
+          }
+        }
       }
     }
   }

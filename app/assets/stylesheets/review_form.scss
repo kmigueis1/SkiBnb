@@ -1,0 +1,63 @@
+
+.review-form-page{
+  padding-top: 110px;
+  font-family: sans-serif;
+  .review-form-container {
+    margin: 0 auto;
+
+    border: 1px solid #dce0e0;
+    width: 700px;
+
+    .review-form-banner{
+      background: #edefed;
+      height: 50px;
+      font-size: 16px;
+      border-bottom: 1px solid #dce0e0;
+      span{
+        margin: 20px;
+        line-height: 50px;
+      }
+    }
+
+
+    .review-form{
+      padding-left: 30px;
+      margin-bottom: 30px;
+      .review-form-message{
+
+      }
+      .star-rating{
+        margin: 10px;
+      }
+      .review-body{
+        margin: 10px;
+        textarea{
+          font-size: 18px;
+          font-family: sans-serif;
+          height: 50px;
+          width: 500px;
+          padding: 10px;
+        }
+      }
+
+      button{
+        width: 163px;
+        height: 42px;
+        border-radius: 5px;
+        color: white;
+        background-color: #ff5a5f;
+        border: #ff5a5f;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+
+  }
+
+}

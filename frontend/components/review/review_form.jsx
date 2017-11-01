@@ -35,22 +35,31 @@ class ReviewForm extends React.Component{
   render(){
     let checked = "checked";
     return(
-      <div className="review-form">
-        <div className="review-form-banner">
-          <span>Leave a Review</span>
-        </div>
-        <div className="review-form-container">
-        </div>
-        <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleRadio} type="radio" name="star" value="1"></input>
-            <input onChange={this.handleRadio} type="radio" name="star" value="2"></input>
-            <input onChange={this.handleRadio} type="radio" name="star" value="3"></input>
-            <input onChange={this.handleRadio} type="radio" name="star" value="4"></input>
-            <input onChange={this.handleRadio} type="radio" name="star" value="5"></input>
+      <div className="review-form-page">
+        <div className="review-form-container ">
+          <div className="review-form-banner">
+            <span>Leave a Review</span>
+          </div>
+          <div className="review-form">
+            <div className="review-form-message">
+              <p>Reviews are written at the end of a reservation through SkiBnB.</p>
+            </div>
+            <form onSubmit={this.handleSubmit}>
+              <div className="star-rating">
+                <input onChange={this.handleRadio} type="radio" name="star" value="1"></input>
+                <input onChange={this.handleRadio} type="radio" name="star" value="2"></input>
+                <input onChange={this.handleRadio} type="radio" name="star" value="3"></input>
+                <input onChange={this.handleRadio} type="radio" name="star" value="4"></input>
+                <input onChange={this.handleRadio} type="radio" name="star" value="5"></input>
+              </div>
+              <div className="review-body">
+                <textarea className="review-text-area" onChange={this.handleBody} value={this.state.body}></textarea>
+              </div>
+              <button>Submit Review</button>
+            </form>
+          </div>
 
-            <textarea onChange={this.handleBody} value={this.state.body}></textarea>
-          <button>Submit Review</button>
-        </form>
+        </div>
       </div>
     );
   }

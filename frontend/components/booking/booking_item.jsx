@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link }  from 'react-router-dom';
-
+import Stars from '../stars/stars'
 class BookingItem extends React.Component{
   constructor(props){
     super(props);
@@ -40,20 +40,24 @@ class BookingItem extends React.Component{
     let endDateDay = endDate[2];
     let hostImage = booking.host_image;
     // {`/account/bookings/${booking.id}/review`}
+    if(booking.review_id){
+
+    }
     let pastBookingFunctionality = booking.review_id ?
-    (<div></div>) :
-    (<div className="review-link">
+    ([<div key={booking.id} className="review-container">
+      <Stars numStars={booking.review_rating}></Stars>
+      <div className="review-text"><p><q>{booking.review_body}</q></p></div>
+      </div>]) :
+    ([<div key={booking.id} className="review-link">
     <Link to={`/account/bookings/${booking.id}/review`}>Leave a Review</Link>
-  </div>)
+  </div>]);
 
     let functionality = this.props.time === "current" ?
     (<div className="cancel-booking-button">
       <button onClick={this.handleCancellation}>Cancel Booking</button>
     </div>) :
     (
-      <div className="review-link">
-      <Link to={`/account/bookings/${booking.id}/review`}>Leave a Review</Link>
-    </div>
+      pastBookingFunctionality
     );
     console.log(this.props);
     return(
