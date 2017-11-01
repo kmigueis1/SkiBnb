@@ -13,8 +13,8 @@ Booking.destroy_all
 user1 = User.create!({email: 'guest@gmail.com', password: 'password', first_name: 'guest', last_name: 'guest', phone: '888-867-5309' });
 user2 = User.create!({email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Kevin', last_name: 'Migueis', phone: '888-867-5309'});
 
-Home.create!({host_id: user2.id, title: 'Cozy Ski Home', address: '25 Berlin Ave, New York, NY', latitude: 40.974937, longitude: -74.019699, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
-Home.create!({host_id: user2.id, title: 'Charming Country Home', address: '25 Berlin Ave, New York, NY', latitude: 41.430582, longitude: -74.605476, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
+home1 = Home.create!({host_id: user2.id, title: 'Cozy Ski Home', address: '25 Berlin Ave, New York, NY', latitude: 40.974937, longitude: -74.019699, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
+home2 = Home.create!({host_id: user2.id, title: 'Charming Country Home', address: '25 Berlin Ave, New York, NY', latitude: 41.430582, longitude: -74.605476, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
 Home.create!({host_id: user2.id, title: 'Cozy Mountain Getaway', address: '25 Berlin Ave, New York, NY', latitude: 41.714139, longitude: -74.954292, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
 Home.create!({host_id: user2.id, title: 'Master Suite Lockout', address: '25 Berlin Ave, New York, NY', latitude: 41.765375, longitude: -74.297859, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
 Home.create!({host_id: user2.id, title: 'Green Mountain View Inn', address: '25 Berlin Ave, New York, NY', latitude: 41.789954, longitude: -74.067146, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3})
@@ -32,7 +32,7 @@ Home.create!({host_id: user2.id, title: 'Seasonal Rental', address: '25 Berlin A
 
 
 
-Booking.create!({start_date: '2016-09-16', end_date: '2016-09-21', user_id: 1, home_id: 2})
-Booking.create!({start_date: '2016-10-17', end_date: '2016-10-21', user_id: 1, home_id: 2})
-Booking.create!({start_date: '2016-11-17', end_date: '2016-11-21', user_id: 1, home_id: 2})
-Booking.create!({start_date: '2016-12-17', end_date: '2016-12-17', user_id: 1, home_id: 2})
+Booking.create!({start_date: '2016-09-16', end_date: '2016-09-21', user_id: user1.id, home_id: home2.id})
+Booking.create!({start_date: '2016-10-17', end_date: '2016-10-21', user_id: user1.id, home_id: home2.id})
+Booking.create!({start_date: '2016-11-17', end_date: '2016-11-21', user_id: user1.id, home_id: home2.id})
+Booking.create!({start_date: '2016-12-17', end_date: '2016-12-17', user_id: user1.id, home_id: home2.id})
