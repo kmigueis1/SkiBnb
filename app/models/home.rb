@@ -39,13 +39,17 @@ class Home < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 
-belongs_to :host,
-foreign_key: :host_id,
-class_name: 'User'
+  belongs_to :host,
+  foreign_key: :host_id,
+  class_name: 'User'
 
-has_many :bookings,
-foreign_key: :home_id,
-class_name: 'Booking'
+  has_many :bookings,
+  foreign_key: :home_id,
+  class_name: 'Booking'
+
+  has_many :reviews,
+  foreign_key: :home_id,
+  class_name: 'Review'
 
   def self.in_bounds(bounds)
     north_east_lat = bounds[:northEast][:lat]
