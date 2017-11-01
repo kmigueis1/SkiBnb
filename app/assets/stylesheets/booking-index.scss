@@ -85,6 +85,21 @@
             }
           }
         }
+        .review-link{
+          margin: 15px;
+          height: 42px;
+
+          a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            &:hover{
+              text-decoration: underline;
+              color: #007a87;
+            }
+          }
+        }
       }
     }
   }

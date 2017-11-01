@@ -9,7 +9,7 @@ import HomesIndexContainer from './homes_index/homes_index_container';
 import HomeShowContainer from './home_show/home_show_container';
 import BookingConfirmForm from './booking/booking_confirm_form';
 import UserBookingsContainer from './booking/user_bookings_container';
-
+import ReviewFormContainer from './review/review_form_container';
 
 const App = () => (
   <div>
@@ -20,11 +20,14 @@ const App = () => (
     <AuthRoute path='/login' component={SessionFormContainer} />
     <AuthRoute path='/signup' component={SessionFormContainer} />
     <div className="main-content">
+      <Switch>
         <UserRoute  exact path='/user/edit' component={UserEditFormContainer} />
+        <UserRoute exact path='/account/bookings/:booking_id/review' component={ReviewFormContainer} />
         <UserRoute exact path='/account/bookings' component={UserBookingsContainer} />
-        <Route exact path='/homes/:id' component={HomeShowContainer} />
         <Route exact path='/homes/:id/book' component={BookingConfirmForm} />
+        <Route exact path='/homes/:id' component={HomeShowContainer} />
         <Route exact path='/' component={HomesIndexContainer} />
+      </Switch>
     </div>
   </div>
 );

@@ -39,6 +39,17 @@ class BookingItem extends React.Component{
     let endDateMonth = parseInt(endDate[1]);
     let endDateDay = endDate[2];
     let hostImage = booking.host_image;
+    // {`/account/bookings/${booking.id}/review`}
+
+    let functionality = this.props.time === "current" ?
+    (<div className="cancel-booking-button">
+      <button onClick={this.handleCancellation}>Cancel Booking</button>
+    </div>) :
+    (
+      <div className="review-link">
+      <Link exact to={`/account/bookings/${booking.id}/review`}>Leave a Review</Link>
+    </div>
+    );
     console.log(this.props);
     return(
       <div className="booking-item">
@@ -57,9 +68,7 @@ class BookingItem extends React.Component{
           <div className="booking-dates">
             <span>{this.months[startDateMonth]} {startDateDay} - {this.months[endDateMonth]} {endDateDay}, {endDateYear}</span>
           </div>
-          <div className="cancel-booking-button">
-            <button onClick={this.handleCancellation}>Cancel Booking</button>
-          </div>
+          {functionality}
         </div>
       </div>
     );
