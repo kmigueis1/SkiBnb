@@ -1,4 +1,4 @@
-debugger
+
 booked_homes = [];
 @bookings.each do |booking|
   booked_homes << booking.home
