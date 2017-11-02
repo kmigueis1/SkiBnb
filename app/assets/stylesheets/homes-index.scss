@@ -20,6 +20,24 @@
         overflow: hidden;
         flex-wrap: wrap;
 
+        .no-results{
+          margin-left: 30px;
+          margin-top: 40px;
+          font-family: sans-serif;
+          .no-results-header{
+            font-size: 36px;
+            font-weight: bold;
+          }
+          .search-suggestions{
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 100;
+            ul{
+              list-style: initial;
+            }
+          }
+        }
+
         .home-tile-container {
             width: 31%;
             margin: 8px 8px 25px;

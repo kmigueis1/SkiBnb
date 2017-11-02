@@ -15,6 +15,22 @@ class HomesIndex extends React.Component {
     let homes = this.props.homes.map((home) => {
       return (<HomeTile key={home.id} home={home}/>);
     })
+    if (homes.length === 0){
+      homes = (
+        <div className="no-results">
+          <div className="no-results-header"><span>No results</span></div>
+          <div className='search-suggestions'>
+            <span>Try adjusting your search. Here are some ideas: </span>
+            <ul>
+              <li> Change your filters</li>
+              <li>Zoom out on the map</li>
+              <li>Search for a specific place</li>
+            </ul>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="homes-container">
         <div className="homes-grid">
