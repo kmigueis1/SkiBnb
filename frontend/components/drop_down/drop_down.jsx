@@ -14,12 +14,16 @@ class DropDown extends React.Component {
       this.props.active ?
       (
       <div className='drop-down' onClick={(e) => {e.stopPropagation()}}>
+        <Link to='/user/edit'>
         <div className='drop-down-item'>
-          <Link to='/user/edit'><span>Edit Profile</span></Link>
+          <span>Edit Profile</span>
         </div>
+        </Link>
+        <Link to='/account/bookings'>
         <div className='drop-down-item'>
-          <Link to='/account/bookings'><span>My Bookings</span></Link>
+          <span>My Bookings</span>
         </div>
+        </Link>
         <div onClick={this.props.logout} className='drop-down-item last-item'>
           <span>Log Out</span>
         </div>
