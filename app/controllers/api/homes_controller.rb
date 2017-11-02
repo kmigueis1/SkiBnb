@@ -1,5 +1,12 @@
 class Api::HomesController < ApplicationController
 
+
+  def search(location)
+    @latitude = Geocoder.search(location)[0].latitude
+    @longitude = Geocoder.search(location)[0].longitude
+    render :search
+  end
+
   def index
     if params[:bounds]
       @homes = Home.in_bounds(params[:bounds])
