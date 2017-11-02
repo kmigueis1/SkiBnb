@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { createDateObject } from '../../util/miscellaneous';
 class BookingWidget extends React.Component {
 
   constructor(props){
@@ -20,7 +21,9 @@ class BookingWidget extends React.Component {
   handleSubmit(e){
     console.log("currentUser: ", this.props.currentUser);
     e.preventDefault();
-    if(this.props.currentUser){
+    let start = createDateObject(this.state.startDate).getTime();
+    let end = createDateObject(this.state.endDate).getTime();
+    if(this.props.currentUser && start < end){
       console.log("valid booking");
       this.props.createBooking(
         {
@@ -32,8 +35,10 @@ class BookingWidget extends React.Component {
       );
       this.setState({userMessage: "Congratulations, you successfully created a booking!"})
       this.props.history.push("/account/bookings");
-    } else {
+    } else if(!this.props.currentUser) {
       this.setState({userMessage: "Please sign in to make a booking."})
+    } else {
+      this.setState({userMessage: "Please pick appropriate dates."})
     }
   }
 
