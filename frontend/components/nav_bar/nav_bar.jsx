@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Route} from 'react-router-dom';
-import SearchBar from '../search_bar/search_bar';
+import SearchBarContainer from '../search_bar/search_bar_container';
 import AccountBar from '../account_bar/account_bar';
 import { Link } from 'react-router-dom';
 
@@ -11,11 +11,11 @@ const NavBar = () => (
       <div className="home-button-container">
         <Link to='/' className="home-button-link">
           <div  className="home-button">
-          </div>    
+          </div>
         </Link>
 
       </div>
-      <SearchBar />
+      <SearchBarContainer />
     </div>
     <div className='right-nav'>
       <AccountBar />
