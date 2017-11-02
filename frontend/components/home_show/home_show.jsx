@@ -12,6 +12,8 @@ class HomeShow extends React.Component {
   }
 
   render(){
+    console.log("Im in homeshow");
+    console.log(this.props)
     let home = this.props.home;
 
     if(!home || !home.amenities) {

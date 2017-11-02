@@ -18,7 +18,7 @@ const HomeReviewItem = (props) => {
     11: "Nov",
     12: "Dec"
   }
-
+  console.log("home review props:", props);
   let review = props.review;
   let postingDate = review.created_at.split("-");
   let postingDateYear = postingDate[0];

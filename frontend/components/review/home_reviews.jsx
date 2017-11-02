@@ -11,7 +11,7 @@ class HomeReviews extends React.Component{
   }
 
   render(){
-    console.log("Im here!");
+    console.log("Im in home reviews!");
     console.log(this.props);
     let homeReviewItems = Object.values(this.props.reviews).map((review) => {
       return (
