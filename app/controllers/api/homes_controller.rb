@@ -2,8 +2,9 @@ class Api::HomesController < ApplicationController
 
 
   def search
-    @latitude = Geocoder.search(params[:location])[0].latitude
-    @longitude = Geocoder.search(params[:location])[0].longitude
+    @location = Geocoder.search(params[:location])[0]
+    @latitude = @location.latitude
+    @longitude = @location.longitude
     render :search
   end
 
