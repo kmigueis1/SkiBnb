@@ -3,6 +3,11 @@ import MarkerManager from '../../util/marker_manager_util'
 
 class HomeIndexMap extends React.Component {
 
+  constructor(props){
+    super(props);
+
+  }
+
   componentDidMount(){
     const mapOptions ={
       center: { lat: 40.751457, lng: -73.983474 },
@@ -24,6 +29,7 @@ class HomeIndexMap extends React.Component {
 
       this.props.updateBounds(bounds);
 
+
       //my test code//////////////
       // let newLatLng = new google.maps.LatLng(37.7749, -122.4194);
       // this.map.setCenter(newLatLng);
@@ -34,7 +40,12 @@ class HomeIndexMap extends React.Component {
 
   componentDidUpdate(){
     this.MarkerManager.updateMarkers(this.props.homes);
-
+    if (this.props.newLocation && this.props.newLocation.setLocation){
+      let lat = this.props.newLocation.latitude;
+      let lng = this.props.newLocation.longitude;
+      let newLatLng = new google.maps.LatLng(lat, lng);
+      this.map.panTo(newLatLng);
+    }
   }
 
   render(){

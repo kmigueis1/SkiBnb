@@ -2,4 +2,4 @@ import React from 'react';
 
 
 
-export defsault HomeShowMap
+export default HomeShowMap

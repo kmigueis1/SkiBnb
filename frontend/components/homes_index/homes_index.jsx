@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeTile from './home_tile'
-import HomeIndexMap from '../home_map/home_index_map';
+import HomeIndexMapContainer from '../home_map/home_index_map_container';
 
 class HomesIndex extends React.Component {
   constructor (props) {
@@ -23,7 +23,7 @@ class HomesIndex extends React.Component {
         <div className="homes-map">
           <div className="homes-map-content">
             <div className="maps-wrapper">
-              <HomeIndexMap homes={Object.values(this.props.homes)} updateBounds={this.props.updateBounds} />
+              <HomeIndexMapContainer homes={Object.values(this.props.homes)} updateBounds={this.props.updateBounds} />
             </div>
           </div>
         </div>
@@ -31,6 +31,8 @@ class HomesIndex extends React.Component {
     );
   }
 }
+
+// <HomeIndexMap homes={Object.values(this.props.homes)} updateBounds={this.props.updateBounds} />
 
 
 export default HomesIndex
