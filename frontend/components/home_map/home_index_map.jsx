@@ -24,6 +24,11 @@ class HomeIndexMap extends React.Component {
 
       this.props.updateBounds(bounds);
 
+      //my test code//////////////
+      // let newLatLng = new google.maps.LatLng(37.7749, -122.4194);
+      // this.map.setCenter(newLatLng);
+      // this.map.panTo(newLatLng);
+
     })
   }
 

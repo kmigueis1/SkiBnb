@@ -38,6 +38,8 @@ class Home < ApplicationRecord
   has_attached_file :image, default_url: "SkiLodge-Default.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 
   belongs_to :host,
   foreign_key: :host_id,
