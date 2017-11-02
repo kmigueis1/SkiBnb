@@ -45,6 +45,7 @@ class HomeIndexMap extends React.Component {
       let lng = this.props.newLocation.longitude;
       let newLatLng = new google.maps.LatLng(lat, lng);
       this.map.panTo(newLatLng);
+      this.props.resetLocation();
     }
   }
 
