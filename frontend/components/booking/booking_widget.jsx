@@ -18,12 +18,52 @@ class BookingWidget extends React.Component {
     this.handleSelect = this.handleSelect.bind(this);
   }
 
+  componentDidMount(){
+    this.props.fetchBookings();
+  }
+
   handleSubmit(e){
     console.log("currentUser: ", this.props.currentUser);
     e.preventDefault();
+
+
+
+    const between = (comp, num1, num2) => {
+      if ((comp > num1 && comp < num2) || (comp > num2 && comp < num1)){
+        return true;
+      }
+      return false;
+    }
+
+    const intersects = (booking1, booking2) => {
+      let start1 = booking1.start_date;
+      let end1 = booking1.end_date;
+      let start2 = booking2.start_date;
+      let end2 = booking2.end_date;
+
+      if(between(start1, start2, end2) || between(end1, start2, end2)){
+        return true;
+      }
+      return false;
+    };
+
+    let userBookings = Object.values(this.props.bookings);
+    let proposedBooking = {
+      start_date: this.state.startDate,
+      end_date: this.state.endDate
+    }
+
+    let valid = true;
+    userBookings.forEach((booking) => {
+      if(intersects(proposedBooking, booking)){
+        valid = false;
+      }
+    });
+
     let start = createDateObject(this.state.startDate).getTime();
     let end = createDateObject(this.state.endDate).getTime();
-    if(this.props.currentUser && start < end){
+
+    if(this.props.currentUser && start < end && valid){
       console.log("valid booking");
       this.props.createBooking(
         {
@@ -37,6 +77,8 @@ class BookingWidget extends React.Component {
       this.props.history.push("/account/bookings");
     } else if(!this.props.currentUser) {
       this.setState({userMessage: "Please sign in to make a booking."})
+    } else if(!valid) {
+      this.setState({userMessage: "Your proposed booking conflicts with an existing booking."})
     } else {
       this.setState({userMessage: "Please pick appropriate dates."})
     }
