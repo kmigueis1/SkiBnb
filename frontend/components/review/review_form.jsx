@@ -34,6 +34,11 @@ class ReviewForm extends React.Component{
 
   render(){
     let checked = "checked";
+    let starred = [];
+
+    for(let i = 0; i <= this.state.rating; i ++){
+      starred.push("higlighted");
+    }
     return(
       <div className="review-form-page">
         <div className="review-form-container ">
@@ -43,6 +48,13 @@ class ReviewForm extends React.Component{
           <div className="review-form">
             <div className="review-form-message">
               <p>Reviews are written at the end of a reservation through SkiBnB.</p>
+            </div>
+            <div className="stars-div">
+              <i className={`fa fa-star ${starred[1]}`}></i>
+              <i className={`fa fa-star ${starred[2]}`}></i>
+              <i className={`fa fa-star ${starred[3]}`}></i>
+              <i className={`fa fa-star ${starred[4]}`}></i>
+              <i className={`fa fa-star ${starred[5]}`}></i>
             </div>
             <form onSubmit={this.handleSubmit}>
               <div className="star-rating">

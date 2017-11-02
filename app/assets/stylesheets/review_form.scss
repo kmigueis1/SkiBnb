@@ -23,11 +23,25 @@
     .review-form{
       padding-left: 30px;
       margin-bottom: 30px;
+      position: relative;
       .review-form-message{
 
       }
+      .stars-div{
+        color: #afafaf;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 33px;
+        left: 41px;
+        font-size: 17px;
+        z-index: -1;
+        .higlighted{
+          color: gold;
+        }
+      }
       .star-rating{
         margin: 10px;
+        opacity: 0;
       }
       .review-body{
         margin: 10px;
