@@ -64,7 +64,6 @@ class BookingWidget extends React.Component {
     let end = createDateObject(this.state.endDate).getTime();
 
     if(this.props.currentUser && start < end && valid){
-      console.log("valid booking");
       this.props.createBooking(
         {
           start_date: this.state.startDate,
@@ -73,7 +72,6 @@ class BookingWidget extends React.Component {
           home_id: this.props.homeId
         }
       );
-      this.setState({userMessage: "Congratulations, you successfully created a booking!"})
       this.props.history.push("/account/bookings");
     } else if(!this.props.currentUser) {
       this.setState({userMessage: "Please sign in to make a booking."})
