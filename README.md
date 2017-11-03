@@ -23,10 +23,10 @@
   The user can use the booking widget in the home details view to select a check-in and check-out date as well as a quantity of guests to create a booking for that home. Users cannot make overlapping bookings and must be logged in to use the widget.
   In the "my bookings" section of the user's profile, the user can view all of his/her past and current bookings along with any reviews they left on the home. They can choose to cancel a current booking and they can click a link on any completed bookings to arrive at a review form to submit a review. Multiple reviews for the same booking cannot be made. Any reviews created will also be displayed on the home's detail page.
 
-###Reviews
+### Reviews
 
   From the "my bookings" page in the user account profile, the user can click a link on an unreviewed booking to go to a review form. The review form allows the user to select a star rating that dynamically highlights the stars based on the chosen rating, and enter a review in the provided text area for submission.
 
-###User Profile
+### User Profile
 
   Once signed in, the user can click the user avatar icon on the right side of the nav bar to open a dropdown. The user can click on "Edit Profile" to access their edit profile page. From this page the user can update his/her profile information as well as load a profile picture. The new profile picture will appear in the avatar icon and also any reviews the user has left on any homes.
