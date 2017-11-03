@@ -5,7 +5,8 @@ import { updateBounds } from '../../actions/filter_actions';
  // fetchHome, createHome, updateHome, deleteHome
 const mapStateToProps = (state) => {
   return {
-    homes: Object.values(state.entities.homes)
+    homes: Object.values(state.entities.homes),
+    loading: state.ui.loader.loading
   };
 };
 

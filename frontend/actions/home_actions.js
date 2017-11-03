@@ -1,5 +1,5 @@
 import * as ApiUtil from '../util/home_api_util';
-
+import { stopLoading } from './ui_actions'
 export const RECEIVE_ALL_HOMES = 'RECEIVE_ALL_HOMES';
 export const RECEIVE_HOME = 'RECEIVE_HOME';
 export const REMOVE_HOME = 'REMOVE_HOME'
@@ -41,7 +41,8 @@ export const receiveErrors = (errors) => {
 
 export const fetchHomes = (filters) => (dispatch) => {
   console.log("I'm in fetchHomes");
-  return ApiUtil.fetchHomes(filters).then((homes) => (dispatch(receiveAllHomes(homes))));
+  return ApiUtil.fetchHomes(filters).then((homes) => (dispatch(receiveAllHomes(homes)))).then(() => dispatch(stopLoading()));
+  // return ApiUtil.fetchHomes(filters).then((homes) => (dispatch(receiveAllHomes(homes))));
 }
 
 export const fetchHome = (id) => (dispatch) => {

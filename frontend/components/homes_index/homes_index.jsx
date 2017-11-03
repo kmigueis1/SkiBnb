@@ -8,14 +8,14 @@ class HomesIndex extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchHomes();
+
   }
 
   render() {
     let homes = this.props.homes.map((home) => {
       return (<HomeTile key={home.id} home={home}/>);
     })
-    if (homes.length === 0){
+    if (homes.length === 0 && !this.props.loading){
       homes = (
         <div className="no-results">
           <div className="no-results-header"><span>No results</span></div>
@@ -33,6 +33,8 @@ class HomesIndex extends React.Component {
 
     return (
       <div className="homes-container">
+        {this.props.loading && <div className="loader">Loading...</div>}
+
         <div className="homes-grid">
           {homes}
         </div>
