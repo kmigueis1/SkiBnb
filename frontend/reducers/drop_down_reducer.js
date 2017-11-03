@@ -1,10 +1,13 @@
-import { TOGGLE_DROPDOWN } from '../actions/ui_actions';
+import { OPEN_DROPDOWN, CLOSE_DROPDOWN } from '../actions/ui_actions';
 
 const DropDownReducer = (state = { open: false }, action) => {
   Object.freeze(state);
   let newState;
   switch(action.type){
-    case TOGGLE_DROPDOWN:
+    case OPEN_DROPDOWN:
+      newState = Object.assign({}, state, {open: true});
+      return newState;
+    case CLOSE_DROPDOWN:
       newState = Object.assign({}, state, {open: false});
       return newState;
     default: return state;

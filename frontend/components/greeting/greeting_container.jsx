@@ -1,6 +1,7 @@
 import Greeting from './greeting';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
+import { openDropDown } from '../../actions/ui_actions';
 
 
 const mapStateToProps = (state) => {
@@ -11,7 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout: () => (dispatch(logout()))
+    logout: () => (dispatch(logout())),
+    openDropDown: () => (dispatch(openDropDown()))
   };
 };
 

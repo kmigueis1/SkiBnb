@@ -12,7 +12,7 @@ class Greeting extends React.Component {
     this.state = {
       dropActive: false
     };
-    this.handleDropdrop = this.handleDropdrop.bind(this);
+    this.handleDropDown = this.handleDropDown.bind(this);
   }
 
   componentDidMount(){
@@ -20,8 +20,9 @@ class Greeting extends React.Component {
   }
 
 
-  handleDropdrop(e){
-    this.setState({dropActive: !this.state.dropActive});
+  handleDropDown(e){
+    // this.setState({dropActive: !this.state.dropActive});
+    this.props.openDropDown();
   }
 
 render(){
@@ -33,7 +34,7 @@ render(){
     <div>
       <div className = 'auth-links'>
         <div className = 'auth-link-container'>
-          <div className = 'user-profile' onClick= {this.handleDropdrop}>
+          <div className = 'user-profile' onClick= {this.handleDropDown}>
             <img className ='avatar-photo' src={this.props.currentUser.avatar_url} ></img>
             <DropDownContainer active={this.state.dropActive}/>
           </div>
