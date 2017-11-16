@@ -8,7 +8,12 @@ class HomeIndexMap extends React.Component {
 
   }
 
+  componentWillUnmount(){
+    google.maps.event.clearInstanceListeners(this.map);
+  }
+
   componentDidMount(){
+    console.log("ALAS THE MAP MOUNTED")
     const mapOptions ={
       center: { lat: 40.751457, lng: -73.983474 },
       zoom: 7
@@ -16,7 +21,8 @@ class HomeIndexMap extends React.Component {
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.homes);
-    google.maps.event.addListener(this.map, 'idle', () => {
+
+    this.idleCallback = () => {
       const mapBounds = this.map.getBounds()
       const northEast = mapBounds.getNorthEast();
       const southWest= mapBounds.getSouthWest();
@@ -25,20 +31,14 @@ class HomeIndexMap extends React.Component {
         northEast: { lat: (northEast.lat()), lng: (northEast.lng()) },
         southWest: { lat: (southWest.lat()), lng: (southWest.lng()) }
       }
-
-
       this.props.updateBounds(bounds);
-
-
-      //my test code//////////////
-      // let newLatLng = new google.maps.LatLng(37.7749, -122.4194);
-      // this.map.setCenter(newLatLng);
-      // this.map.panTo(newLatLng);
-
-    })
+    }
+    google.maps.event.addListener(this.map, 'idle', this.idleCallback)
   }
 
   componentDidUpdate(){
+    //this gets called immediately after the whole dom updates
+    console.log("HOME INDEX MAP DID JUST UPDATE TOO!!!");
     this.MarkerManager.updateMarkers(this.props.homes);
     if (this.props.newLocation && this.props.newLocation.setLocation){
       let lat = this.props.newLocation.latitude;

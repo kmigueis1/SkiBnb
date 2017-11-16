@@ -18,6 +18,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+
     if @user.update(user_params)
       render :show
     else

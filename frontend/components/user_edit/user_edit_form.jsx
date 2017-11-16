@@ -49,7 +49,7 @@ class UserEditForm extends React.Component {
 
   render(){
 
-    let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
+    // let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
 
 
 

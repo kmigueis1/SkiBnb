@@ -5,12 +5,10 @@ import HomeIndexMap from '../home_map/home_index_map';
 const Search = () => {
   return(
     <div>
-      <HomesIndexContainer />
-      <HomeIndexMap />
+
     </div>
   );
 };
-
 
 
 export default Search;

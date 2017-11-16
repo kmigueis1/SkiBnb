@@ -44,7 +44,7 @@ class UploadPhotoForm extends React.Component {
 
   render(){
 
-    let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
+    // let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
     let imageUrl = this.state.imageUrl ? (this.state.imageUrl) : (this.props.currentUser.avatar_url)
 
     return(
