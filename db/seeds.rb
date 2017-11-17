@@ -12,17 +12,17 @@ Booking.destroy_all
 
 user1 = User.create!({email: 'guest@gmail.com', password: 'password', first_name: 'guest', last_name: 'guest', phone: '888-867-5309' });
 user2 = User.create!({email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Kevin', last_name: 'Migueis', phone: '888-867-5309'});
-user3 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-1.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Joey', last_name: 'Migueis', phone: '888-867-5309'});
-user4 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-10.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Casey', last_name: 'Migueis', phone: '888-867-5309'});
-user5 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-11.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Sam', last_name: 'Migueis', phone: '888-867-5309'});
-user6 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-12.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Jules', last_name: 'Migueis', phone: '888-867-5309'});
-user7 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-13.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Bailey', last_name: 'Migueis', phone: '888-867-5309'});
-user8 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-14.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Kyle', last_name: 'Migueis', phone: '888-867-5309'});
-user9 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-17.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Harper', last_name: 'Migueis', phone: '888-867-5309'});
-user10 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-22.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'River', last_name: 'Migueis', phone: '888-867-5309'});
-user11 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-23.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Alex', last_name: 'Migueis', phone: '888-867-5309'});
-user12 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-25.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Drew', last_name: 'Migueis', phone: '888-867-5309'});
-user13 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-25.jpg", email: 'kmigueis1@gmail.com', password: 'starwars', first_name: 'Taylor', last_name: 'Migueis', phone: '888-867-5309'});
+user3 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-1.jpg", email: 'kmigueis2@gmail.com', password: 'starwars', first_name: 'Joey', last_name: 'Migueis', phone: '888-867-5309'});
+user4 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-10.jpg", email: 'kmigueis3@gmail.com', password: 'starwars', first_name: 'Casey', last_name: 'Migueis', phone: '888-867-5309'});
+user5 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-11.jpg", email: 'kmigueis4@gmail.com', password: 'starwars', first_name: 'Sam', last_name: 'Migueis', phone: '888-867-5309'});
+user6 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-12.jpg", email: 'kmigueis5@gmail.com', password: 'starwars', first_name: 'Jules', last_name: 'Migueis', phone: '888-867-5309'});
+user7 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-13.jpg", email: 'kmigueis6@gmail.com', password: 'starwars', first_name: 'Bailey', last_name: 'Migueis', phone: '888-867-5309'});
+user8 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-14.jpg", email: 'kmigueis7@gmail.com', password: 'starwars', first_name: 'Kyle', last_name: 'Migueis', phone: '888-867-5309'});
+user9 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/download-17.jpg", email: 'kmigueis8@gmail.com', password: 'starwars', first_name: 'Harper', last_name: 'Migueis', phone: '888-867-5309'});
+user10 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-22.jpg", email: 'kmigueis9@gmail.com', password: 'starwars', first_name: 'River', last_name: 'Migueis', phone: '888-867-5309'});
+user11 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-23.jpg", email: 'kmigueis10@gmail.com', password: 'starwars', first_name: 'Alex', last_name: 'Migueis', phone: '888-867-5309'});
+user12 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-25.jpg", email: 'kmigueis11@gmail.com', password: 'starwars', first_name: 'Drew', last_name: 'Migueis', phone: '888-867-5309'});
+user13 = User.create!({avatar: "https://s3.amazonaws.com/skibnb-seeds/seeds/users/images-25.jpg", email: 'kmigueis12@gmail.com', password: 'starwars', first_name: 'Taylor', last_name: 'Migueis', phone: '888-867-5309'});
 
 
 home1 = Home.create!({image: "https://s3.amazonaws.com/skibnb-seeds/seeds/homes/014-South-Lake-Tahoe-CA-03.jpg", host_id: user2.id, title: 'Cozy Ski Home', address: '25 Berlin Ave, New York, NY', latitude: 40.974937, longitude: -74.019699, price: 120.00, bedrooms: 2, beds: 4, baths: 2, description: 'This is real cozy', cancellation: 'strict', max_guests: 4, minimum_stay: 3 })

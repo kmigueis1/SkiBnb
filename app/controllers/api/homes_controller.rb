@@ -9,6 +9,7 @@ class Api::HomesController < ApplicationController
   end
 
   def index
+    debugger
     if params[:bounds]
       @homes = Home.in_bounds(params[:bounds])
     else
