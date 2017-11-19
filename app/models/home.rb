@@ -6,8 +6,8 @@
 #  host_id            :integer          not null
 #  title              :string           not null
 #  address            :string           not null
-#  latitude           :float            not null
-#  longitude          :float            not null
+#  lat           :float            not null
+#  lng          :float            not null
 #  price              :float            not null
 #  bedrooms           :integer          not null
 #  beds               :integer          not null
@@ -31,15 +31,16 @@
 #
 
 class Home < ApplicationRecord
-  validates :host_id, :title, :address, :latitude, :longitude, presence: true
+  validates :host_id, :title, :lat, :lng, presence: true
   validates :price, :bedrooms, :beds, :baths, :description, presence: true
   validates :cancellation, :max_guests, :minimum_stay, presence: true
 
   has_attached_file :image, default_url: "SkiLodge-Default.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  geocoded_by :address
+  reverse_geocoded_by :latitude, :longitude, address: :address
   after_validation :geocode, if: :address_changed?
+  # geocoded_by :address, latitude: :lat, longitude: :lng
 
   belongs_to :host,
   foreign_key: :host_id,
@@ -59,8 +60,8 @@ class Home < ApplicationRecord
     south_west_lat = bounds[:southWest][:lat]
     south_west_lng = bounds[:southWest][:lng]
 
-    self.where("latitude < ?", north_east_lat).where("longitude < ?", north_east_lng)
-      .where("latitude > ?", south_west_lat).where("longitude > ?", south_west_lng)
+    self.where("lat < ?", north_east_lat).where("lng < ?", north_east_lng)
+      .where("lat > ?", south_west_lat).where("lng > ?", south_west_lng)
 
       #
       # db.execute(<<-SQL, north_east_lat: north_east_lat, north_east_lng: nort_east_lng, south_west_lat: south_west_lat, south_west_lng: south_west_lng )
@@ -69,7 +70,7 @@ class Home < ApplicationRecord
       #   FROM
       #   homes
       #   WHERE
-      #   homes.latitude < north_east_lat AND homes.longitude < north_east_lng AND homes.latitude > south_west_lat AND homes.longitude > south_west_lng
+      #   homes.lat < north_east_lat AND homes.lng < north_east_lng AND homes.lat > south_west_lat AND homes.lng > south_west_lng
       # SQL
   end
 

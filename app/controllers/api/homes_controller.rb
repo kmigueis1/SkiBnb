@@ -3,13 +3,12 @@ class Api::HomesController < ApplicationController
 
   def search
     @location = Geocoder.search(params[:location])[0]
-    @latitude = @location.latitude
-    @longitude = @location.longitude
+    @lat = @location.latitude
+    @lng = @location.longitude
     render :search
   end
 
   def index
-    debugger
     if params[:bounds]
       @homes = Home.in_bounds(params[:bounds])
     else
@@ -51,8 +50,8 @@ class Api::HomesController < ApplicationController
 
 
   def home_params
-    params.require(:home).permit(:host_id, :title, :address, :latitude,
-    :longitude, :price, :bedrooms, :beds, :baths, :description, :kitchen,
+    params.require(:home).permit(:host_id, :title, :address, :lat,
+    :lng, :price, :bedrooms, :beds, :baths, :description, :kitchen,
     :tv, :wifi, :washer, :dryer, :parking, :cancellation, :max_guests, :minimum_stay)
   end
 

@@ -1,2 +1,2 @@
-json.latitude @latitude
-json.longitude @longitude
+json.lat @lat
+json.lng @lng

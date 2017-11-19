@@ -11,7 +11,7 @@
     reviews_avg = 0
   end
   json.set! home.id do
-    json.extract! home, :id, :title, :price, :beds, :baths, :latitude, :longitude
+    json.extract! home, :id, :title, :price, :beds, :baths, :lat, :lng
     json.avgReviews reviews_avg
     json.numReviews reviews.length
     json.image_url asset_path(home.image.url)

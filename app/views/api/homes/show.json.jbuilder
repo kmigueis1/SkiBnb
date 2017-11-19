@@ -2,8 +2,8 @@ json.id @home.id
 json.hostId @home.host_id
 json.title @home.title
 json.address @home.address
-json.latitude @home.latitude
-json.longitude @home.longitude
+json.lat @home.lat
+json.lng @home.lng
 json.price @home.price
 json.bedrooms @home.bedrooms
 json.beds @home.beds
