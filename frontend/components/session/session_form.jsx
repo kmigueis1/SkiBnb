@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
     return (
       <div className="auth-modal">
         <div className="auth-form">
-          <div className="form-exit"><Link to='/' ><i>&times;</i></Link></div>
+          <div className="form-exit"><Link to='/' ><span>&times;</span></Link></div>
           <div>{header}</div>
           <div className="bar"></div>
           {
