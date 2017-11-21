@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>SkiBnb</title>
+    <%= favicon_link_tag 'favicon.png' %>
     <%= csrf_meta_tags %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
@@ -21,6 +22,7 @@
         alert(data.message);
       });
     </script> -->
+
     <script type="text/javascript">
       window.cloudinary_options = {
         cloud_name: '<%= ENV['CLOUD_NAME'] %>',
@@ -35,6 +37,7 @@
 <!-- google goecoding api key: AIzaSyBkJs35X0ZAAcPwTVI7J2mp9FjuGyf-_F8 -->
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
