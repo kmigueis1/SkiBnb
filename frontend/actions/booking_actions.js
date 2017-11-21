@@ -37,7 +37,6 @@ export const receiveErrors = (errors) => {
 //thunks
 
 export const fetchBookings = () => (dispatch) => {
-  console.log("im in fetchbookings");
   return ApiUtil.fetchBookings().then((bookings) => (dispatch(receiveAllBookings(bookings))));
 }
 
@@ -46,7 +45,6 @@ export const fetchBooking = (id) => (dispatch) => {
 }
 
 export const createBooking = (booking) => (dispatch) => {
-  console.log(booking);
   return ApiUtil.createBooking(booking).then((booking) => (dispatch(receiveBooking(booking))));
 };
 

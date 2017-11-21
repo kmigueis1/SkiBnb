@@ -21,13 +21,10 @@ class Greeting extends React.Component {
 
 
   handleDropDown(e){
-    // this.setState({dropActive: !this.state.dropActive});
     this.props.openDropDown();
   }
 
 render(){
-  // <img src={user.avatar_url} ></img>
-  //this img tag above is how you can insert the user's image
   return (
     this.props.currentUser ?
     (

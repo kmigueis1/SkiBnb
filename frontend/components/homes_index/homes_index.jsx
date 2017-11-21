@@ -5,7 +5,6 @@ import HomeIndexMapContainer from '../home_map/home_index_map_container';
 class HomesIndex extends React.Component {
   constructor (props) {
     super(props);
-    console.log("YO HOMESINDEX WAS JUST INSTANTIATED!!!!!!!!!!!!!!");
   }
 
   componentDidMount() {

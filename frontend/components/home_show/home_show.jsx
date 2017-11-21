@@ -3,17 +3,12 @@ import BookingWidgetContainer from '../booking/booking_widget_container';
 import HomeReviewsContainer from '../review/home_reviews_container';
 
 class HomeShow extends React.Component {
-  // componentWillMount(){
-  //   this.props.fetchHome(this.props.match.params.id);
-  // }
 
   componentDidMount(){
     this.props.fetchHome(this.props.match.params.id);
   }
 
   render(){
-    console.log("Im in homeshow");
-    console.log(this.props)
     let home = this.props.home;
 
     if(!home || !home.amenities) {
@@ -33,13 +28,6 @@ class HomeShow extends React.Component {
     const backgroundImageStyles = {
       backgroundImage: `url(${home.image_url})`
     };
-    // <img src={home.image_url} />
-    // <div className="home-show-nav">
-    //   <a href="#overview">Overview</a>
-    //   <a href="#reviews">Reviews</a>
-    //   <a href="#host">The Host</a>
-    //   <a href="#location">Location</a>
-    // </div>
 
     return (
       <div className="home-show-container">

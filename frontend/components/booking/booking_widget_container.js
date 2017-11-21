@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import BookingWidget from './booking_widget';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.session.currentUser);
   return {
     maxGuests: ownProps.maxGuests,
     homeId: ownProps.homeId,

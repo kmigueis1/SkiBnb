@@ -16,8 +16,6 @@ export const closeDropDown = () => {
 };
 
 export const stopLoading = () => {
-  console.log("I am stop loading!!!!");
-
   return{
     type: STOP_LOADING
   };

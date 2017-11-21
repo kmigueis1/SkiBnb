@@ -6,8 +6,6 @@ export const REMOVE_HOME = 'REMOVE_HOME'
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveAllHomes = (homes) => {
-  console.log("Im in receiveAllHomes action creator");
-  console.log("homes is: ", homes);
   return {
     type: RECEIVE_ALL_HOMES,
     homes: homes
@@ -40,9 +38,7 @@ export const receiveErrors = (errors) => {
 
 
 export const fetchHomes = (filters) => (dispatch) => {
-  console.log("I'm in fetchHomes");
   return ApiUtil.fetchHomes(filters).then((homes) => (dispatch(receiveAllHomes(homes)))).then(() => dispatch(stopLoading()));
-  // return ApiUtil.fetchHomes(filters).then((homes) => (dispatch(receiveAllHomes(homes))));
 }
 
 export const fetchHome = (id) => (dispatch) => {

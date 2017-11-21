@@ -5,7 +5,6 @@ class BookingWidget extends React.Component {
 
   constructor(props){
     super(props);
-    // let currentTime =
     this.state = {
       startDate: "",
       endDate: "",
@@ -23,7 +22,6 @@ class BookingWidget extends React.Component {
   }
 
   handleSubmit(e){
-    console.log("currentUser: ", this.props.currentUser);
     e.preventDefault();
 
 
@@ -100,7 +98,6 @@ class BookingWidget extends React.Component {
     for(let i = 1; i <= this.props.maxGuests; i++){
       options.push(<option key={i} value={i}>{i + " guest"}</option>)
     }
-    console.log(this.state.userMessage);
     return(
       <div className="booking-widget">
         <div className="booking-price-bar">

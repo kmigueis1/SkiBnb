@@ -31,5 +31,4 @@ const App = () => (
     </div>
   </div>
 );
-// <GreetingContainer/>
 export default App;

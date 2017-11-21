@@ -6,8 +6,6 @@ const ReviewsReducer = (state = {}, action) => {
   let newState;
   switch(action.type){
     case RECEIVE_ALL_REVIEWS:
-      // newState = Object.assign({}, {}, action.reviews);
-      console.log("here are my reviews in reducer", action.reviews)
       newState = action.reviews
       return newState;
     case RECEIVE_REVIEW:

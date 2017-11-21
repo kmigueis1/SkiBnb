@@ -26,7 +26,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    // this.setState({password: "", email: "", first_name: "", last_name: "", phone: "", password: ""});
   }
 
   handleEmail(e){
@@ -65,7 +64,6 @@ class SessionForm extends React.Component {
     let text = this.props.formType === '/signup' ? ('Already have a Skibnb account?') : ("Don't have an account?");
     let submitName = this.props.formType === '/signup' ? ('Sign up') : ('Log in');
     let passwordPlaceholder = this.props.formType === '/signup' ? ("Create a Password") : ("Password");
-    // let errors = Object.values(this.props.errors);
     let errors = this.props.errors.session.sessionErrors.map((error) => ((<li>{error}</li>)));
     let signupFields = this.props.formType === '/signup' ? (
       <div>
@@ -85,7 +83,6 @@ class SessionForm extends React.Component {
         </div>
       </div>) : (<h1></h1>);
 
-      // <div className="form-exit"><Link to='/' ><i className="icon fa fa-times"></i></Link></div>
     return (
       <div className="auth-modal">
         <div className="auth-form">

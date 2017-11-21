@@ -13,7 +13,6 @@ class HomeIndexMap extends React.Component {
 
   componentDidMount(){
 
-    console.log("ALAS THE MAP MOUNTED")
     const mapOptions ={
       center: { lat: 40.751457, lng: -73.983474 },
       zoom: 7
@@ -39,14 +38,11 @@ class HomeIndexMap extends React.Component {
   }
 
   componentDidUpdate(){
-    //this gets called immediately after the whole dom updates
 
-    console.log("HOME INDEX MAP DID JUST UPDATE TOO!!!");
     this.MarkerManager.updateMarkers(this.props.homes);
     if (this.props.newLocation && this.props.newLocation.setLocation){
       let lat = this.props.newLocation.lat;
       let lng = this.props.newLocation.lng;
-      console.log("lat", lat);
       let newLatLng = new google.maps.LatLng(lat, lng);
       this.map.panTo(newLatLng);
       this.props.resetLocation();

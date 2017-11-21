@@ -39,7 +39,6 @@ class BookingItem extends React.Component{
     let endDateMonth = parseInt(endDate[1]);
     let endDateDay = endDate[2];
     let hostImage = booking.host_image;
-    // {`/account/bookings/${booking.id}/review`}
     if(booking.review_id){
 
     }
@@ -59,7 +58,6 @@ class BookingItem extends React.Component{
     (
       pastBookingFunctionality
     );
-    console.log(this.props);
     return(
       <div className="booking-item">
         <div className="host-photo">

@@ -18,15 +18,10 @@ const HomeReviewItem = (props) => {
     11: "Nov",
     12: "Dec"
   }
-  console.log("home review props:", props);
   let review = props.review;
   let postingDate = review.created_at.split("-");
   let postingDateYear = postingDate[0];
   let postingDateMonth = months[parseInt(postingDate[1])];
-  console.log(postingDateYear);
-  console.log(postingDateMonth);
-  console.log("this is supposed to be a review: ", review);
-  console.log("hello there miss daisy");
   return(
     <div className="review-item">
       <div className="review-item-header">

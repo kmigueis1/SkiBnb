@@ -3,7 +3,6 @@ import { createReview } from '../../actions/review_actions';
 import ReviewForm from './review_form';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
   return {
     bookingId: ownProps.match.params.booking_id
   };

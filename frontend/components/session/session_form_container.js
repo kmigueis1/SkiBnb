@@ -4,7 +4,6 @@ import { login, signup } from '../../actions/session_actions';
 import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
-  //may want to check what formType string actually evaluates to
   return {
     loggedIn: !!state.session.currentUser,
     errors: state.errors,

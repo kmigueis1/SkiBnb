@@ -7,7 +7,6 @@ class ReviewForm extends React.Component{
       rating: 0,
       body: ""
     }
-    console.log("props: ", props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBody = this.handleBody.bind(this);
     this.handleRadio = this.handleRadio.bind(this);
