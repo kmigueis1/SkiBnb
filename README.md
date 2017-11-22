@@ -3,7 +3,7 @@
 
   SkiBnb is a web application based on the popular website Airbnb. It utilizes React and Redux for the frontend of the application and Rails for the backend. It allows hosts to list their winter sport friendly homes for rent to the general public on a day to day basis. Users can search for and book homes as well as review their stays.
 
-<a href="https://imgflip.com/gif/1zsvq2"><img src="https://i.imgflip.com/1zsvq2.gif" title="made at imgflip.com"/></a>
+![SkiBnB Site Demo](SkiBnb/app/assets/images/ezgif.com-video-to-gif.gif)
 
 ## Features
 
