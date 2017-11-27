@@ -1,9 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
-let plugins = [];
-let devPlugins = []; 
+var plugins = [];
+var devPlugins = []; 
 
-let prodPlugins = [
+var prodPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': JSON.stringify('production')
