@@ -1,5 +1,5 @@
-const path = require("path");
-const webpack = require("webpack");
+var path = require("path");
+var webpack = require("webpack");
 var plugins = [];
 var devPlugins = []; 
 
@@ -29,6 +29,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '*']
   },
+  plugins: plugins,
   module: {
     loaders: [
       {
