@@ -37,7 +37,7 @@ gem 'pusher'
 gem 'figaro'
 gem 'aws-sdk', '< 3.0'
 gem 'paperclip', '~> 5.0.0.beta1'
-gem 'pry-rails'
+
 gem 'annotate'
 gem 'geocoder'
 
@@ -48,6 +48,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
 end
 
 group :development do
