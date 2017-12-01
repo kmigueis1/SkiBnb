@@ -15,7 +15,7 @@ class HomeShow extends React.Component {
       return null;
     }
 
-    let cleaningFee = (home.price * 0.15);
+    let cleaningFee = (home.price * 0.15).toFixed(2);
     // let sleepingArrangements = [];
     // for(let i = 0; i < home.beds; i++){
     //   sleepingArrangements.push(<div key={i}>
