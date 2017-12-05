@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Home.find(params[:home_id]).reviews
+    @reviews = Home.find(params[:home_id]).reviews.includes(booking: :user)
     # @reviews = Review.where("home_id = ?", params[:home_id])
     render :index
   end

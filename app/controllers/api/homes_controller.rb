@@ -8,7 +8,7 @@ class Api::HomesController < ApplicationController
 
   def index
     if params[:bounds]
-      @homes = Home.in_bounds(params[:bounds])
+      @homes = Home.in_bounds(params[:bounds]).includes(:reviews)
     else
       @homes = Home.all
     end
