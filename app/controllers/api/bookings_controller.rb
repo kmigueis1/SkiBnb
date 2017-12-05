@@ -2,7 +2,7 @@ class Api::BookingsController < ApplicationController
 
   def index
     if current_user
-      @bookings = current_user.bookings
+      @bookings = current_user.bookings.includes(:review, home: :host)
     end
     render :index
   end
@@ -35,7 +35,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:id]).includes(home: :host)
     render :show
   end
 
