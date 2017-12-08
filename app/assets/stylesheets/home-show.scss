@@ -30,10 +30,11 @@ $medium-color: rgb(72, 72, 72);
     font-family: sans-serif;
 
     .home-show-centered {
-      display: flex;
+      //position: relative;
+      //display: flex;
       width: 85%;
       margin: 0 auto;
-      justify-content: space-between;
+      //justify-content: space-between;
     }
 
     h1 {
@@ -148,8 +149,9 @@ $medium-color: rgb(72, 72, 72);
         height: 330px;
         width: 380px;
         // background-color: white;
-        position: relative;
-        top: -50px;
+        position: absolute;
+        top: 530px;
+        right: 225px;
 
         .booking-price-bar{
           height: 50px;
@@ -270,6 +272,12 @@ $medium-color: rgb(72, 72, 72);
                 }
               }
         }
+      }
+
+      .fixed-widget{
+        position: fixed;
+        top: 81px;
+        right: 225px;
       }
     // }
 

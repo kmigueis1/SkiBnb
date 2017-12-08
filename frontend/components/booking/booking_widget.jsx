@@ -9,16 +9,33 @@ class BookingWidget extends React.Component {
       startDate: "",
       endDate: "",
       selected: "1 guest",
-      userMessage: ""
+      userMessage: "",
+      fixed: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStartDate = this.handleStartDate.bind(this);
     this.handleEndDate = this.handleEndDate.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchBookings();
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(e){
+    if(!this.state.fixed && window.scrollY >= 448){
+      this.setState({fixed: true})
+    } else if (this.state.fixed && window.scrollY < 448) {
+      this.setState({fixed: false})
+    } else {
+
+    }
   }
 
   handleSubmit(e){
@@ -98,8 +115,10 @@ class BookingWidget extends React.Component {
     for(let i = 1; i <= this.props.maxGuests; i++){
       options.push(<option key={i} value={i}>{i + " guest"}</option>)
     }
+
+    let fixed = this.state.fixed ? ("fixed-widget") : ("")
     return(
-      <div className="booking-widget">
+      <div className={`booking-widget ${fixed}`}>
         <div className="booking-price-bar">
           <div className="price-spans">
             <span className="booking-span1">${`${this.props.price}`} </span>
